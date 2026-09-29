@@ -1,0 +1,638 @@
+/* ========================================
+   03. LOTES - GENERAL
+======================================== */
+.lotes {
+    padding: 50px 0;
+    background: #f8f6ef;
+}
+
+.section-label-grande {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #c69b3b;
+    text-transform: uppercase;
+}
+
+.lotes h2 {
+    color: #1f3026;
+    margin-bottom: 10px;
+}
+
+.section-description {
+    color: #526158;
+    font-size: 17px;
+    margin-bottom: 25px;
+    max-width: 700px;
+}
+
+/* ========================================
+   LEYENDA
+======================================== */
+.mapa-leyenda {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 25px;
+    font-size: 14px;
+    color: #526158;
+}
+
+.mapa-leyenda .dot {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    margin-right: 6px;
+}
+
+.dot.dot-a {
+    background: #2c8a55;
+}
+
+/* Verde Manzana A */
+.dot.dot-b {
+    background: #b18a35;
+}
+
+/* Bronce Manzana B */
+.dot.dot-c {
+    background: #4a5a6b;
+}
+
+/* Azul Manzana C */
+
+/* ========================================
+   LAYOUT: EXPLORADOR (GRID)
+======================================== */
+.lotes-explorador {
+    display: grid;
+    grid-template-columns: 1fr 340px;
+    /* Mapa a la izq, tarjeta a la derecha */
+    gap: 30px;
+    align-items: start;
+}
+
+/* ========================================
+   VIEWPORT DEL MAPA (Arrastrable)
+======================================== */
+.mapa-viewport {
+    width: 100%;
+    height: 480px;
+    /* Caja cortada/reducida como pediste */
+    background: #ffffff;
+    border: 1px solid #e5e0d5;
+    border-radius: 24px;
+    overflow: hidden;
+    position: relative;
+    cursor: grab;
+    box-shadow: 0 10px 30px rgba(30, 55, 40, 0.06);
+    touch-action: none;
+}
+
+.mapa-viewport:active {
+    cursor: grabbing;
+}
+
+/* BOTÓN SUPERPUESTO "VER MAPA COMPLETO" */
+.btn-mapa-completo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    background: #1f3026;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+}
+
+.btn-mapa-completo:hover {
+    background: #c69b3b;
+    transform: scale(1.05);
+}
+
+/* ========================================
+   MAPA INTERNO Y FONDO PNG
+======================================== */
+.mapa-container {
+    width: 1200px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform-origin: 0 0;
+    will-change: transform;
+
+    /* FONDO PNG DEL MAPA QUE SE MUEVE JUNTO CON LOS LOTES */
+    background-image: url('../assets/plano/alameda_yanamarca_mapa_overlay_manzanas.png');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top left;
+}
+
+.mapa-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    pointer-events: none;
+    /* Crucial para drag */
+}
+
+/* Lotes dentro del SVG */
+#lotes-web path {
+    pointer-events: auto;
+    cursor: pointer;
+    transition: fill 0.3s ease, stroke 0.3s ease;
+    outline: none !important;
+    /* Quita el recuadro negro molesto */
+}
+
+/* ========================================
+   COLORES Y ESTADOS POR MANZANA
+======================================== */
+/* Manzana A */
+#lotes-web path.manzana-A {
+    stroke: #2c8a55 !important;
+    stroke-width: 1px !important;
+}
+
+#lotes-web path.manzana-A:hover {
+    fill: rgba(44, 138, 85, 0.4) !important;
+    stroke: #2c8a55 !important;
+    stroke-width: 2px !important;
+}
+
+#lotes-web path.manzana-A.activo {
+    fill: rgba(44, 138, 85, 0.5) !important;
+    stroke: #2c8a55 !important;
+    stroke-width: 3px !important;
+}
+
+/* Manzana B */
+#lotes-web path.manzana-B {
+    stroke: #b18a35 !important;
+    stroke-width: 1px !important;
+}
+
+#lotes-web path.manzana-B:hover {
+    fill: rgba(177, 138, 53, 0.4) !important;
+    stroke: #b18a35 !important;
+    stroke-width: 2px !important;
+}
+
+#lotes-web path.manzana-B.activo {
+    fill: rgba(177, 138, 53, 0.5) !important;
+    stroke: #b18a35 !important;
+    stroke-width: 3px !important;
+}
+
+/* Manzana C */
+#lotes-web path.manzana-C {
+    stroke: #4a5a6b !important;
+    stroke-width: 1px !important;
+}
+
+#lotes-web path.manzana-C:hover {
+    fill: rgba(74, 90, 107, 0.4) !important;
+    stroke: #4a5a6b !important;
+    stroke-width: 2px !important;
+}
+
+#lotes-web path.manzana-C.activo {
+    fill: rgba(74, 90, 107, 0.5) !important;
+    stroke: #4a5a6b !important;
+    stroke-width: 3px !important;
+}
+
+/* ========================================
+   ETIQUETAS (NÚMEROS) DENTRO DEL MAPA
+======================================== */
+.etiqueta-lote {
+    fill: #526158;
+    font-family: Arial, sans-serif;
+    font-size: 7px;
+    font-weight: 100;
+    text-anchor: middle;
+    dominant-baseline: central;
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ========================================
+   COLUMNA DERECHA (TARJETA + BOTÓN EXTERNO)
+======================================== */
+.columna-derecha-lotes {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-lote {
+    background: #ffffff;
+    border: 1px solid #e5e0d5;
+    border-radius: 24px;
+    padding: 30px;
+    box-shadow: 0 15px 35px rgba(30, 55, 40, 0.08);
+    position: relative;
+}
+
+.estado-inicial {
+    text-align: center;
+    color: #a0a8a3;
+    padding: 40px 0;
+}
+
+.cerrar-lote {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    color: #a0a8a3;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.cerrar-lote:hover {
+    color: #1f3026;
+}
+
+.info-lote h2 {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    color: #1f3026;
+    margin-bottom: 12px;
+    padding-right: 20px;
+}
+
+.estado-etiqueta {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 25px;
+}
+
+.estado-etiqueta.disponible {
+    background: #e8f9ef;
+    color: #25d366;
+}
+
+.estado-etiqueta.reservado {
+    background: #fdf0ed;
+    color: #e74c3c;
+}
+
+.info-lote p {
+    color: #526158;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.info-lote strong {
+    color: #1f3026;
+}
+
+.subtitulo-medidas {
+    font-size: 16px;
+    margin: 25px 0 12px;
+    color: #1f3026;
+}
+
+/* Diseño de medidas con línea punteada */
+.medidas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 10px;
+    margin-bottom: 25px;
+}
+
+.medidas p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px dashed #e5e0d5;
+    padding-bottom: 4px;
+    margin: 0;
+}
+
+.precio {
+    background: #f8f6ef;
+    padding: 18px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}
+
+.precio span {
+    display: block;
+    font-size: 13px;
+    color: #68736d;
+    margin-bottom: 4px;
+}
+
+.precio strong {
+    font-size: 26px;
+    color: #1f3026;
+}
+
+.boton-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    background: #145c2d;
+    color: white;
+    padding: 15px;
+    border-radius: 12px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.boton-whatsapp:hover {
+    background: #0f4220;
+}
+
+/* BOTÓN DESCARGAR AFUERA DE LA TARJETA BLANCA */
+.btn-descargar-afuera {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    background: transparent;
+    border: 2px solid #1f3026;
+    color: #1f3026;
+    padding: 16px;
+    border-radius: 16px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s;
+}
+
+.btn-descargar-afuera:hover {
+    background: #1f3026;
+    color: white;
+}
+
+/* ========================================
+   RESPONSIVE (MÓVIL Y TABLET)
+======================================== */
+@media (max-width: 950px) {
+    .lotes-explorador {
+        grid-template-columns: 1fr;
+    }
+
+    .mapa-viewport {
+        height: 400px;
+    }
+
+    .btn-mapa-completo {
+        top: 10px;
+        left: 10px;
+        padding: 8px 14px;
+    }
+}
+
+/* ========================================
+   ELEMENTOS OCULTOS POR DEFECTO
+======================================== */
+.topbar-fullscreen,
+.minimapa-flotante {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+    font-family: inherit;
+}
+
+/* ========================================
+   MODO PANTALLA COMPLETA (FULLSCREEN)
+======================================== */
+body.modo-fullscreen {
+    overflow: hidden;
+    /* Evita hacer scroll en la página */
+    background: #f8f6ef;
+}
+
+/* Ocultar el resto de la página web */
+body.modo-fullscreen .header,
+body.modo-fullscreen .hero,
+body.modo-fullscreen .ubicacion,
+body.modo-fullscreen .servicios,
+body.modo-fullscreen .diferencias,
+body.modo-fullscreen .bloque-oscuro-final,
+body.modo-fullscreen .section-label-grande,
+body.modo-fullscreen .lotes h2,
+body.modo-fullscreen .section-description,
+body.modo-fullscreen .mapa-leyenda,
+body.modo-fullscreen .btn-mapa-completo,
+body.modo-fullscreen .btn-descargar-afuera,
+body.modo-fullscreen #estado-inicial {
+    display: none !important;
+}
+
+/* Expandir la sección de lotes al 100% */
+body.modo-fullscreen .lotes {
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+}
+
+body.modo-fullscreen .section-container {
+    width: 100%;
+    margin: 0;
+}
+
+body.modo-fullscreen .lotes-explorador {
+    display: block;
+    /* Quitamos la grilla */
+    height: 100vh;
+}
+
+body.modo-fullscreen .mapa-viewport {
+    height: 100vh;
+    border-radius: 0;
+    border: none;
+}
+
+/* --------------------------------------
+   BARRA SUPERIOR (HEADER FULLSCREEN)
+-------------------------------------- */
+body.modo-fullscreen .topbar-fullscreen {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+
+    /* FONDO VERDE OSCURO */
+    background: #1f3026;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    z-index: 100;
+    /* Encima del mapa */
+}
+
+.topbar-izq {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.topbar-izq img {
+    width: 120px;
+    filter: brightness(0) invert(1);
+    /* Truco: Vuelve el logo blanco automáticamente para que se vea en el fondo verde */
+}
+
+.topbar-izq span {
+    font-size: 16px;
+    font-weight: 600;
+    color: #c69b3b;
+    /* Dorado */
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    /* Línea más suave */
+    padding-left: 20px;
+}
+
+.btn-volver {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* Borde blanquito */
+    color: #ffffff;
+    /* Letras blancas */
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.btn-volver:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+/* --------------------------------------
+   MINI MAPA FLOTANTE
+-------------------------------------- */
+body.modo-fullscreen .minimapa-flotante {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 90px;
+    right: 30px;
+    z-index: 100;
+    background: white;
+    padding: 10px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.minimapa-flotante img {
+    width: 200px;
+    border-radius: 10px;
+    border: 1px solid #e5e0d5;
+}
+
+.btn-descargar-mini {
+    text-align: center;
+    background: #1f3026;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* --------------------------------------
+   NUEVO: FONDO OSCURO DEL MODAL
+-------------------------------------- */
+.overlay-modal {
+    display: none;
+    /* Oculto por defecto */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(15, 25, 18, 0.7);
+    /* Verde muy oscuro y transparente */
+    backdrop-filter: blur(3px);
+    /* Desenfoca el mapa del fondo (Toque premium) */
+    z-index: 999;
+    /* Por debajo de la tarjeta blanca */
+}
+
+/* --------------------------------------
+   TARJETA FLOTANTE (MODAL POPUP) CORREGIDA
+-------------------------------------- */
+body.modo-fullscreen .info-lote {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000;
+    /* Siempre por encima de todo */
+
+    width: 90%;
+    max-width: 400px;
+    background: #ffffff !important;
+    /* Forzamos a que sea BLANCA siempre */
+    border: none;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+}
+
+/* Clases para mostrar el modal y el fondo */
+body.modo-fullscreen .info-lote.mostrar-modal,
+body.modo-fullscreen .overlay-modal.mostrar-modal {
+    display: block;
+}
+
+/* Botón cerrar "X" corregido para que se vea bien */
+.cerrar-lote {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background: none;
+    border: none;
+    font-size: 32px;
+    /* Más grande */
+    color: #1f3026;
+    /* Color oscuro */
+    cursor: pointer;
+    z-index: 10;
+}
+
+.cerrar-lote:hover {
+    color: #c69b3b;
+}

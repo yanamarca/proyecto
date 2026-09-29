@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Alameda de Yanamarca</title>
+
+    <!-- CSS GENERAL -->
+    <link rel="stylesheet" href="css/global.css">
+
+    <!-- CSS POR SECCIÓN -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/ubicacion.css">
+    <link rel="stylesheet" href="css/lotes.css">
+    <link rel="stylesheet" href="css/servicios.css">
+    <link rel="stylesheet" href="css/diferencias.css">
+    <link rel="stylesheet" href="css/galeria.css">
+    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/footer.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         HEADER (MENÚ BLANCO)
+    ========================== -->
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="#inicio" class="logo">
+                <img src="assets/img/LOGO_ALAMEDA.png" alt="Alameda de Yanamarca">
+            </a>
+
+            <nav class="nav" id="nav-menu">
+                <a href="#inicio" class="activo">Inicio</a>
+                <a href="#ubicacion">Ubicación</a>
+                <a href="#lotes">Lotes</a>
+                <a href="#servicios">Servicios</a>
+                <a href="#diferencias">Nosotros</a>
+
+                <!-- Botón visible solo dentro del menú desplegable móvil -->
+                <a href="#contacto" class="header-whatsapp-movil">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                        <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                        <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                        <path d="M9 15a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1Z" />
+                        <path d="M14 15a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1Z" />
+                    </svg>
+                    Comunícate
+                </a>
+            </nav>
+
+            <a href="#contacto" class="header-whatsapp">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                    <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                    <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                    <path d="M9 15a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1Z" />
+                    <path d="M14 15a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1Z" />
+                </svg>
+                Comunícate
+            </a>
+
+            <button class="menu-button" id="menu-button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                    stroke="#1f3026" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="3" y1="12" x2="21" y2="12"></line>
+                    <line x1="3" y1="6" x2="21" y2="6"></line>
+                    <line x1="3" y1="18" x2="21" y2="18"></line>
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <!-- =========================
+             01. HERO
+        ========================== -->
+    <section id="inicio" class="hero">
+
+        <!-- VIDEO DE FONDO -->
+        <video class="hero-video" autoplay loop muted playsinline>
+            <source src="assets/videos/INICIO.mp4" type="video/mp4">
+        </video>
+
+        <!-- CAPA OSCURA PARA QUE RESALTE EL TEXTO -->
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <span class="hero-label">
+                ALAMEDA DE YANAMARCA
+            </span>
+
+            <h1>
+                Tu historia<br>
+                empieza aquí
+            </h1>
+
+            <p>
+                Un lugar pensado para tu futuro,
+                rodeado de naturaleza, tranquilidad
+                y espacios para construir tus sueños.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#lotes" class="btn-primary">
+                    Explorar lotes
+                </a>
+                <a href="#ubicacion" class="btn-secondary">
+                    Conocer ubicación
+                </a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+             02. UBICACIÓN
+        ========================== -->
+    <section id="ubicacion" class="ubicacion">
+
+        <div class="section-container">
+
+            <span class="section-label-grande fade-in">
+                UBICACIÓN
+            </span>
+
+            <h2 class="fade-in">
+                Conoce dónde empieza tu historia
+            </h2>
+
+            <div class="ubicacion-content">
+
+                <!-- TEXTO CON ÍCONO -->
+                <div class="ubicacion-info fade-in">
+                    <div class="ubicacion-icono">
+                        <!-- Ícono de Pin de Mapa -->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none"
+                            stroke="#c69b3b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <p>
+                        Descubre la ubicación de
+                        Alameda de Yanamarca y conoce
+                        el entorno donde podrás construir
+                        tu futuro.
+                    </p>
+                </div>
+
+                <!-- CUADRO PEQUEÑO (Abajo Izquierda): GOOGLE MAPS -->
+                <div class="ubicacion-mapa-iframe hover-flotar fade-in">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3958.2914482050464!2d-78.43011899999999!3d-7.207554000000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMTInMjcuMiJTIDc4wrAyNSc0OC40Ilc!5e0!3m2!1ses!2spe!4v1790606716983!5m2!1ses!2spe"
+                        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                </div>
+
+                <!-- CUADRO GRANDE (Derecha): VIDEO -->
+                <div class="ubicacion-video-main hover-flotar fade-in">
+                    <video controls playsinline>
+                        <source src="assets/videos/UBICACION.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         03. LOTES
+    ========================== -->
+    <section id="lotes" class="lotes">
+
+        <!-- BARRA SUPERIOR PANTALLA COMPLETA (Oculta por defecto) -->
+        <div class="topbar-fullscreen">
+            <div class="topbar-izq">
+                <img src="assets/img/LOGO_AL_FONDO.png" alt="Alameda de Yanamarca">
+                <span>Explora nuestro plano interactivo</span>
+            </div>
+            <button id="btn-volver-normal" class="btn-volver">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Volver a la web
+            </button>
+        </div>
+
+        <div class="section-container">
+            <span class="section-label-grande">NUESTROS LOTES</span>
+            <h2>Encuentra tu lote</h2>
+            <p class="section-description">
+                Explora el plano interactivo, haz clic en un lote para
+                conocer su área, medidas, precio y disponibilidad.
+            </p>
+
+            <div class="mapa-leyenda">
+                <span><span class="dot dot-a"></span> Manzana A</span>
+                <span><span class="dot dot-b"></span> Manzana B</span>
+                <span><span class="dot dot-c"></span> Manzana C</span>
+            </div>
+
+            <div class="lotes-explorador">
+
+                <!-- CONTENEDOR DEL MAPA -->
+                <div class="mapa-viewport" id="viewport">
+
+                    <!-- BOTÓN "MAPA COMPLETO" (Ahora es un button, no un <a>) -->
+                    <button id="btn-abrir-pantalla-completa" class="btn-mapa-completo">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 3h6v6"></path>
+                            <path d="M9 21H3v-6"></path>
+                            <path d="M21 3l-7 7"></path>
+                            <path d="M3 21l7-7"></path>
+                        </svg>
+                        Ver mapa completo
+                    </button>
+
+                    <!-- MINI MAPA FLOTANTE -->
+                    <div class="minimapa-flotante">
+                        <img src="assets/img/alameda_yanamarca_mapa_overlay_manzanas.png" alt="Mini mapa de referencia">
+                        <!-- RUTA CORREGIDA -->
+                        <a href="assets/pdf/Plano_Alameda_Yanamarca.pdf" download="Plano_Alameda_Yanamarca.pdf"
+                            class="btn-descargar-mini">
+                            Descargar Plano
+                        </a>
+                    </div>
+
+                    <div class="mapa-container" id="mapa-container">
+                        <!-- El SVG interactivo se inyectará aquí desde JS -->
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA -->
+                <div class="columna-derecha-lotes">
+
+                    <!-- NUEVO: FONDO OSCURO PARA EL MODAL -->
+                    <div id="overlay-modal" class="overlay-modal"></div>
+
+                    <!-- TARJETA DE INFORMACIÓN -->
+                    <aside class="info-lote" id="info-lote">
+                        <div class="info-lote-contenido">
+
+                            <!-- ESTADO INICIAL CORREGIDO (Logo degradado) -->
+                            <div id="estado-inicial" class="estado-inicial">
+                                <img src="assets/img/LOGO_AL_FONDO.png" alt="Alameda Logo"
+                                    style="opacity: 0.3; width: 120px; margin: 0 auto 15px;">
+                                <h3 style="color: #1f3026;">Selecciona un lote</h3>
+                                <p>Haz clic en el mapa para ver los detalles.</p>
+                            </div>
+
+                            <!-- Datos del Lote -->
+                            <div id="datos-lote" style="display: none;">
+                                <button id="cerrar-lote" class="cerrar-lote">&times;</button>
+
+                                <h2 id="lote-titulo">Lote 00 - Manzana X</h2>
+
+                                <div class="estado-etiqueta" id="lote-estado-etiqueta">
+                                    Disponible
+                                </div>
+
+                                <p><strong>Área:</strong> <span id="lote-area"></span> m²</p>
+                                <p><strong>Perímetro:</strong> <span id="lote-perimetro"></span> m</p>
+
+                                <h3 class="subtitulo-medidas">Medidas</h3>
+                                <div class="medidas">
+                                    <p><span>Frente:</span> <strong><span id="medida-frente"></span> m</strong></p>
+                                    <p><span>Izquierda:</span> <strong><span id="medida-izquierda"></span> m</strong>
+                                    </p>
+                                    <p><span>Fondo:</span> <strong><span id="medida-fondo"></span> m</strong></p>
+                                    <p><span>Derecha:</span> <strong><span id="medida-derecha"></span> m</strong></p>
+                                </div>
+
+                                <div class="precio">
+                                    <span>Precio de lista</span>
+                                    <strong id="lote-precio">S/ 0.00</strong>
+                                </div>
+
+                                <a id="boton-whatsapp" class="boton-whatsapp" target="_blank">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                                        <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                                        <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                                        <path d="M9 15a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1Z" />
+                                        <path d="M14 15a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1Z" />
+                                    </svg>
+                                    Reservar por WhatsApp
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+
+                    <!-- BOTÓN DESCARGAR AFUERA -->
+                    <a href="assets/pdf/Plano_Alameda_Yanamarca.pdf" download="Plano_Alameda_Yanamarca.pdf"
+                        class="btn-descargar-afuera">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                            <polyline points="7 10 12 15 17 10"></polyline>
+                            <line x1="12" y1="15" x2="12" y2="3"></line>
+                        </svg>
+                        Descargar plano completo (PDF)
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- =========================
+         04. SERVICIOS
+    ========================== -->
+    <section id="servicios" class="servicios">
+        <div class="section-container">
+
+            <div class="servicios-layout">
+                <!-- LADO IZQUIERDO: Texto -->
+                <div class="servicios-texto">
+                    <span class="section-label-grande">SERVICIOS</span>
+                    <h2>Conoce nuestros servicios</h2>
+                    <p>El proyecto cuenta con todos los servicios básicos, brindándote comodidad y seguridad para tu
+                        familia.</p>
+                </div>
+
+                <!-- LADO DERECHO: Pestañas Interactivas -->
+                <div class="servicios-interactivo">
+
+                    <!-- Botones de Pestañas -->
+                    <div class="tabs-header">
+                        <button class="tab-btn activo" data-target="tab-agua">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                            </svg>
+                            Agua
+                        </button>
+                        <button class="tab-btn" data-target="tab-desague">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M9 22V12h6v10"></path>
+                                <path d="M2 10.6L12 2l10 8.6"></path>
+                            </svg>
+                            Desagüe
+                        </button>
+                        <button class="tab-btn" data-target="tab-luz">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                            Luz
+                        </button>
+                    </div>
+
+                    <!-- Contenido de las Pestañas -->
+                    <div class="tabs-body">
+
+                        <!-- TAB: AGUA -->
+                        <div id="tab-agua" class="tab-content activo">
+                            <img src="assets/img/AGUA.png" alt="Servicio de Agua">
+                            <div class="tab-info">
+                                <h3>Servicio de agua</h3>
+                                <p>El proyecto cuenta con conexión al sistema de agua potable, garantizando un
+                                    abastecimiento continuo y de calidad para todos los lotes.</p>
+                            </div>
+                        </div>
+
+                        <!-- TAB: DESAGÜE -->
+                        <div id="tab-desague" class="tab-content">
+                            <img src="assets/img/DESAGUE.png" alt="Sistema de Desagüe">
+                            <div class="tab-info">
+                                <h3>Sistema de desagüe</h3>
+                                <p>Contamos con un sistema de desagüe proyectado para la zona, cumpliendo con los
+                                    estándares de sanidad y cuidado ambiental.</p>
+                            </div>
+                        </div>
+
+                        <!-- TAB: LUZ -->
+                        <div id="tab-luz" class="tab-content">
+                            <img src="assets/img/LUZ.png" alt="Servicio Eléctrico">
+                            <div class="tab-info">
+                                <h3>Red eléctrica</h3>
+                                <p>Red eléctrica disponible con acceso rápido para cada lote, asegurando iluminación y
+                                    energía para tu futuro hogar.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+
+    <!-- =========================
+         05. DIFERENCIAS
+    ========================== -->
+    <section id="diferencias" class="diferencias">
+        <div class="section-container">
+
+            <div class="diferencias-layout">
+
+                <!-- COLUMNA IZQUIERDA: Textos e Íconos -->
+                <div class="diferencias-texto">
+                    <span class="section-label-grande fade-in">
+                        ¿QUÉ NOS DIFERENCIA?
+                    </span>
+                    <h2 class="fade-in">
+                        Razones para elegir<br>Alameda de Yanamarca
+                    </h2>
+
+                    <div class="diferencias-lista">
+
+                        <!-- Item 1 -->
+                        <div class="diferencias-item fade-in" style="animation-delay: 0.2s;">
+                            <div class="icono-circulo">
+                                <!-- Ícono de Hoja (Naturaleza) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path
+                                        d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z">
+                                    </path>
+                                    <path d="M2 22l10-10"></path>
+                                </svg>
+                            </div>
+                            <div class="item-texto">
+                                <h3>Entorno natural</h3>
+                                <p>Un espacio rodeado de naturaleza y aire puro.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 2 -->
+                        <div class="diferencias-item fade-in" style="animation-delay: 0.3s;">
+                            <div class="icono-circulo">
+                                <!-- Ícono de Gota (Servicios) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                                </svg>
+                            </div>
+                            <div class="item-texto">
+                                <h3>Servicios completos</h3>
+                                <p>Agua, desagüe y red eléctrica a tu disposición.</p>
+                            </div>
+                        </div>
+
+                        <!-- Item 3 -->
+                        <div class="diferencias-item fade-in" style="animation-delay: 0.4s;">
+                            <div class="icono-circulo">
+                                <!-- Ícono de Crecimiento (Proyección) -->
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round">
+                                    <path d="M2 22h20"></path>
+                                    <path d="M12 22V4"></path>
+                                    <path d="M12 12a4 4 0 0 0 4-4V4"></path>
+                                    <path d="M12 18a6 6 0 0 0-6-6H4"></path>
+                                </svg>
+                            </div>
+                            <div class="item-texto">
+                                <h3>Proyección y futuro</h3>
+                                <p>Un proyecto pensado para crecer y valorizarse.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- COLUMNA DERECHA: Video -->
+                <div class="diferencias-video hover-flotar fade-in" style="animation-delay: 0.5s;">
+                    <video controls playsinline>
+                        <source src="assets/videos/SERVICIOS.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================
+         06. GALERÍA
+    ========================== -->
+
+
+    <!-- =========================
+         07. CONTACTO Y FOOTER (BLOQUE OSCURO)
+    ========================== -->
+    <div class="bloque-oscuro-final">
+
+        <!-- SECCIÓN CONTACTO (CTA) -->
+        <section id="contacto" class="contacto">
+            <div class="contacto-wrapper">
+                <h2 class="contacto-titulo">¿Tienes dudas?</h2>
+                <p class="contacto-texto">Escríbenos por WhatsApp y recibe<br>asesoría personalizada.</p>
+                <a href="https://wa.me/51968760846" target="_blank" class="btn-outline-blanco">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+                        <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                        <path d="M14 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1Z" />
+                        <path d="M9 15a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1Z" />
+                        <path d="M14 15a.5.5 0 0 0 1 0v-1a.5.5 0 0 0-1 0v1Z" />
+                    </svg>
+                    Comunícate ahora
+                </a>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="footer-grid">
+
+                <!-- 1. Logo Alameda -->
+                <div class="footer-logo">
+                    <img src="assets/img/LOGO_AL_FONDO.png" alt="Alameda de Yanamarca">
+                </div>
+
+                <!-- Línea separadora vertical -->
+                <div class="footer-divider"></div>
+
+                <!-- 2. Logo Cabrera -->
+                <div class="footer-proyecto">
+                    <span>Un proyecto de</span>
+                    <img src="assets/img/LOGO_CA_FONDO.png" alt="Cabrera Capital">
+                </div>
+
+                <!-- 3. Contáctanos -->
+                <div class="footer-contacto">
+                    <h4>Contáctanos</h4>
+                    <ul>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                            +51 968 760 846
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            cabreracapitalsac@gmail.com
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                            Cajamarca, Perú
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 4. Enlaces -->
+                <div class="footer-enlaces">
+                    <h4>Enlaces</h4>
+                    <div class="enlaces-grid">
+                        <a href="#inicio">Inicio</a>
+                        <a href="#servicios">Servicios</a>
+                        <a href="#ubicacion">Ubicación</a>
+                        <a href="#lotes">Lotes</a>
+                        <a href="#contacto">Contacto</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+
+    </div>
+
+
+
+    <!-- JAVASCRIPT -->
+    <script src="js/lotes.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

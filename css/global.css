@@ -1,0 +1,49 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f6ef;
+    color: #1f3026;
+}
+
+a {
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+button {
+    font-family: inherit;
+}
+
+.section-container {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+.section-label {
+    display: block;
+    margin-bottom: 10px;
+
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+
+    color: #b18a35;
+}
+
+h2 {
+    font-size: clamp(32px, 4vw, 52px);
+    line-height: 1.1;
+}

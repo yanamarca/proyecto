@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 319.393 838.812" width="1000" height="2626.3" role="img" aria-label="Plano Alameda de Yanamarca">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<g id="mapa-web" fill="none" stroke="#66747c" stroke-width="0.75" stroke-linecap="round" stroke-linejoin="round">
+<path id="mapa-1" d="M 22.268,826.042 30.352,821.819 38.688,817.462 46.770,813.253 54.882,809.078 63.110,804.858 71.226,800.603 79.300,796.311 84.314,793.588 103.879,783.099 111.962,779.036 120.196,774.901 128.463,770.920 136.852,766.880 145.271,763.091 153.647,759.167 163.705,754.601 179.350,747.350 191.163,741.316 200.368,736.643 206.646,733.522" stroke="#6b7a82" fill="none" data-layer="MAPA_WEB" data-closed="false"/>
+<path id="mapa-2" d="M 193.043,779.700 189.536,745.072 188.068,741.842 188.645,738.403 191.552,697.067 190.171,682.217 189.892,665.094 191.244,654.229 191.659,617.900 193.291,595.969 195.036,554.821 198.358,514.699 200.549,489.077 206.331,423.486 210.093,397.240 262.113,388.430" stroke="#72828a" fill="none" data-layer="MAPA_WEB" data-closed="false"/>
+<path id="mapa-3" d="M 257.019,375.262 216.341,380.358 219.179,352.545 221.931,331.552 225.983,310.895 234.845,264.186 240.715,237.398 249.169,187.066 253.956,163.656 264.127,118.064 267.302,104.810 270.134,90.072 273.545,75.857 274.963,70.033 279.444,51.433" stroke="#72828a" fill="none" data-layer="MAPA_WEB" data-closed="false"/>
+<path id="mapa-7" d="M 102.028,764.799 102.789,759.331 55.312,750.589 47.649,792.242 Z" stroke="#5c8b63" fill="#e8f0e8" data-layer="MAPA_WEB" data-closed="true"/>
+<path id="mapa-8" d="M 239.832,142.596 219.892,138.926 221.529,130.029 211.673,128.215 209.355,140.808 239.088,146.279 Z" stroke="#6b7a82" fill="none" data-layer="MAPA_WEB" data-closed="true"/>
+<path id="mapa-9" d="M 12.000,812.757 27.765,804.802" stroke="#72828a" fill="none" data-layer="MAPA_WEB" data-closed="false"/>
+<path id="mapa-15" d="M 173.599,12.000 27.765,804.802 27.765,804.802" stroke="#72828a" fill="none" data-layer="MAPA_WEB" data-closed="false"/>
+<path id="mapa-16" d="M 24.042,826.812 31.048,823.151 39.383,818.795 47.461,814.588 55.569,810.415 63.802,806.193 71.928,801.932 80.011,797.635 85.028,794.911 104.572,784.433 112.637,780.379 120.860,776.250 129.115,772.274 137.487,768.243 145.899,764.457 154.277,760.532 164.332,755.967 180.008,748.701 191.845,742.655 201.043,737.986 207.315,734.868" stroke="#6b7a82" fill="none" data-layer="MAPA_WEB" data-closed="false"/>
+<path id="mapa-17" d="M 184.423,779.482 181.386,749.421 179.905,746.191 163.831,753.720 151.322,759.441 103.718,782.509 22.386,825.014 19.280,826.812" stroke="#72828a" fill="none" data-layer="MAPA_WEB" data-closed="false"/>
+<path id="mapa-18" d="M 118.255,84.126 177.677,72.597 221.418,63.271 250.647,57.830 265.794,54.471 289.669,49.157 307.393,48.777" stroke="#72828a" fill="none" data-layer="MAPA_WEB" data-closed="false"/>
+<path id="mapa-19" d="M 307.393,30.890 278.493,36.014 217.719,48.026 173.231,56.028 118.799,66.791" stroke="#72828a" fill="none" data-layer="MAPA_WEB" data-closed="false"/>
+</g>
+<g id="mapa-labels" fill="#45535a" font-family="Arial, sans-serif" font-size="5.5" text-anchor="middle">
+<text id="mapa-text-1" x="98.657" y="780.010" transform="rotate(-27.668 98.657 780.010)" data-layer="MAPA_WEB">ACCESO CARROZABLE</text>
+<text id="mapa-text-2" x="106.800" y="786.343" transform="rotate(-27.718 106.800 786.343)" data-layer="MAPA_WEB">CANAL DE REGADIO</text>
+<text id="mapa-text-3" x="138.048" y="378.979" transform="rotate(-348.640 138.048 378.979)" data-layer="MAPA_WEB">CALLE 02</text>
+<text id="mapa-text-4" x="205.796" y="403.323" transform="rotate(-80.027 205.796 403.323)" data-layer="MAPA_WEB">CALLE 03</text>
+<text id="mapa-text-5" x="260.876" y="108.485" transform="rotate(-80.027 260.876 108.485)" data-layer="MAPA_WEB">CALLE 03</text>
+<text id="mapa-text-6" x="43.313" y="776.534" transform="rotate(-80.027 43.313 776.534)" data-layer="MAPA_WEB">CALLE 01</text>
+<text id="mapa-text-7" x="165.259" y="111.379" transform="rotate(-80.027 165.259 111.379)" data-layer="MAPA_WEB">CALLE 01</text>
+<text id="mapa-text-8" x="114.169" y="389.745" transform="rotate(-80.027 114.169 389.745)" data-layer="MAPA_WEB">CALLE 01</text>
+</g>
+<g id="lotes-web" fill="transparent" stroke="#2f6f8f" stroke-width="0.9" stroke-linejoin="round">
+<path id="lot-geom-001" d="M 126.283,364.894 133.537,325.470 147.425,328.026 140.171,367.449 Z" data-layer="LOTES_WEB" data-geometry-index="1" data-closed="true" tabindex="0"/>
+<path id="lot-geom-002" d="M 140.171,367.449 147.425,328.025 161.371,330.592 154.117,370.016 Z" data-layer="LOTES_WEB" data-geometry-index="2" data-closed="true" tabindex="0"/>
+<path id="lot-geom-003" d="M 154.117,370.016 161.372,330.591 175.318,333.158 168.064,372.582 Z" data-layer="LOTES_WEB" data-geometry-index="3" data-closed="true" tabindex="0"/>
+<path id="lot-geom-004" d="M 168.064,372.582 175.318,333.158 189.222,335.716 181.968,375.140 Z" data-layer="LOTES_WEB" data-geometry-index="4" data-closed="true" tabindex="0"/>
+<path id="lot-geom-005" d="M 133.537,325.470 147.425,328.026 161.371,330.592 168.226,331.853 170.947,317.069 136.257,310.686 Z" data-layer="LOTES_WEB" data-geometry-index="5" data-closed="true" tabindex="0"/>
+<path id="lot-geom-006" d="M 136.257,310.686 170.947,317.069 173.667,302.285 138.978,295.902 Z" data-layer="LOTES_WEB" data-geometry-index="6" data-closed="true" tabindex="0"/>
+<path id="lot-geom-007" d="M 138.978,295.902 173.667,302.285 176.378,287.553 141.688,281.170 Z" data-layer="LOTES_WEB" data-geometry-index="7" data-closed="true" tabindex="0"/>
+<path id="lot-geom-008" d="M 141.688,281.170 176.378,287.553 179.098,272.769 144.409,266.386 Z" data-layer="LOTES_WEB" data-geometry-index="8" data-closed="true" tabindex="0"/>
+<path id="lot-geom-009" d="M 144.409,266.386 179.098,272.769 181.815,258.002 147.126,251.618 Z" data-layer="LOTES_WEB" data-geometry-index="9" data-closed="true" tabindex="0"/>
+<path id="lot-geom-010" d="M 147.126,251.618 181.815,258.002 184.536,243.217 149.846,236.834 Z" data-layer="LOTES_WEB" data-geometry-index="10" data-closed="true" tabindex="0"/>
+<path id="lot-geom-011" d="M 149.846,236.834 184.536,243.217 187.239,228.524 152.550,222.141 Z" data-layer="LOTES_WEB" data-geometry-index="11" data-closed="true" tabindex="0"/>
+<path id="lot-geom-012" d="M 152.550,222.141 187.239,228.524 189.956,213.761 155.266,207.378 Z" data-layer="LOTES_WEB" data-geometry-index="12" data-closed="true" tabindex="0"/>
+<path id="lot-geom-013" d="M 157.914,192.991 192.603,199.374 195.414,184.097 160.725,177.715 Z" data-layer="LOTES_WEB" data-geometry-index="13" data-closed="true" tabindex="0"/>
+<path id="lot-geom-014" d="M 160.725,177.715 195.414,184.097 198.134,169.313 163.445,162.931 Z" data-layer="LOTES_WEB" data-geometry-index="14" data-closed="true" tabindex="0"/>
+<path id="lot-geom-015" d="M 163.445,162.931 198.134,169.313 200.854,154.530 166.165,148.147 Z" data-layer="LOTES_WEB" data-geometry-index="15" data-closed="true" tabindex="0"/>
+<path id="lot-geom-016" d="M 166.165,148.147 200.854,154.530 203.575,139.744 168.886,133.361 Z" data-layer="LOTES_WEB" data-geometry-index="16" data-closed="true" tabindex="0"/>
+<path id="lot-geom-017" d="M 170.947,317.069 205.603,323.446 208.218,308.643 173.667,302.285 Z" data-layer="LOTES_WEB" data-geometry-index="17" data-closed="true" tabindex="0"/>
+<path id="lot-geom-018" d="M 173.667,302.285 208.218,308.643 210.824,293.891 176.378,287.553 Z" data-layer="LOTES_WEB" data-geometry-index="18" data-closed="true" tabindex="0"/>
+<path id="lot-geom-019" d="M 176.378,287.553 210.824,293.891 213.440,279.088 179.098,272.769 Z" data-layer="LOTES_WEB" data-geometry-index="19" data-closed="true" tabindex="0"/>
+<path id="lot-geom-020" d="M 179.098,272.769 213.440,279.088 216.052,264.302 181.815,258.002 Z" data-layer="LOTES_WEB" data-geometry-index="20" data-closed="true" tabindex="0"/>
+<path id="lot-geom-021" d="M 181.815,258.002 216.052,264.302 218.668,249.497 184.536,243.217 Z" data-layer="LOTES_WEB" data-geometry-index="21" data-closed="true" tabindex="0"/>
+<path id="lot-geom-022" d="M 184.536,243.217 218.668,249.497 221.267,234.785 187.239,228.524 Z" data-layer="LOTES_WEB" data-geometry-index="22" data-closed="true" tabindex="0"/>
+<path id="lot-geom-023" d="M 187.239,228.524 221.267,234.785 224.193,220.061 189.956,213.761 Z" data-layer="LOTES_WEB" data-geometry-index="23" data-closed="true" tabindex="0"/>
+<path id="lot-geom-024" d="M 189.956,213.761 224.193,220.061 227.088,205.719 192.603,199.374 Z" data-layer="LOTES_WEB" data-geometry-index="24" data-closed="true" tabindex="0"/>
+<path id="lot-geom-025" d="M 192.603,199.374 227.088,205.719 230.162,190.491 195.414,184.097 Z" data-layer="LOTES_WEB" data-geometry-index="25" data-closed="true" tabindex="0"/>
+<path id="lot-geom-026" d="M 195.414,184.097 230.162,190.491 233.138,175.754 198.134,169.313 Z" data-layer="LOTES_WEB" data-geometry-index="26" data-closed="true" tabindex="0"/>
+<path id="lot-geom-027" d="M 200.854,154.530 236.113,161.017 239.088,146.279 203.575,139.744 Z" data-layer="LOTES_WEB" data-geometry-index="27" data-closed="true" tabindex="0"/>
+<path id="lot-geom-028" d="M 117.108,414.753 122.747,384.115 138.166,386.953 134.138,417.887 Z" data-layer="LOTES_WEB" data-geometry-index="28" data-closed="true" tabindex="0"/>
+<path id="lot-geom-029" d="M 176.134,393.939 192.476,396.946 189.669,412.812 188.704,427.783 188.704,427.783 172.712,425.559 Z" data-layer="LOTES_WEB" data-geometry-index="29" data-closed="true" tabindex="0"/>
+<path id="lot-geom-030" d="M 161.032,391.105 156.552,423.311 172.712,425.559 176.134,393.939 Z" data-layer="LOTES_WEB" data-geometry-index="30" data-closed="true" tabindex="0"/>
+<path id="lot-geom-031" d="M 180.270,540.082 179.281,553.072 139.280,547.509 141.071,534.630 180.270,540.082" data-layer="LOTES_WEB" data-geometry-index="31" data-closed="false" tabindex="0"/>
+<path id="lot-geom-032" d="M 179.281,553.072 178.273,566.312 137.454,560.635 139.280,547.509 179.281,553.072" data-layer="LOTES_WEB" data-geometry-index="32" data-closed="false" tabindex="0"/>
+<path id="lot-geom-033" d="M 178.273,566.312 177.305,578.802 135.732,573.020 137.454,560.635 178.273,566.312" data-layer="LOTES_WEB" data-geometry-index="33" data-closed="false" tabindex="0"/>
+<path id="lot-geom-034" d="M 177.305,578.802 176.336,591.291 134.010,585.404 135.732,573.020 177.305,578.802" data-layer="LOTES_WEB" data-geometry-index="34" data-closed="false" tabindex="0"/>
+<path id="lot-geom-035" d="M 176.336,591.291 175.367,603.780 132.287,597.789 134.010,585.404 176.336,591.291" data-layer="LOTES_WEB" data-geometry-index="35" data-closed="false" tabindex="0"/>
+<path id="lot-geom-036" d="M 174.399,616.269 174.399,616.269 173.223,628.741 128.841,622.569 130.565,610.173 174.399,616.269" data-layer="LOTES_WEB" data-geometry-index="36" data-closed="false" tabindex="0"/>
+<path id="lot-geom-037" d="M 173.223,628.741 171.995,641.207 127.117,634.966 128.841,622.569 173.223,628.741" data-layer="LOTES_WEB" data-geometry-index="37" data-closed="false" tabindex="0"/>
+<path id="lot-geom-038" d="M 171.995,641.207 170.768,653.674 125.393,647.363 127.117,634.966 171.995,641.207" data-layer="LOTES_WEB" data-geometry-index="38" data-closed="false" tabindex="0"/>
+<path id="lot-geom-039" d="M 170.768,653.674 169.540,666.140 123.669,659.761 125.393,647.363 170.768,653.674" data-layer="LOTES_WEB" data-geometry-index="39" data-closed="false" tabindex="0"/>
+<path id="lot-geom-040" d="M 169.540,666.140 169.414,667.421 169.790,678.665 121.964,672.013 123.669,659.761 169.540,666.140" data-layer="LOTES_WEB" data-geometry-index="40" data-closed="false" tabindex="0"/>
+<path id="lot-geom-041" d="M 134.138,417.887 138.166,386.953 154.168,389.897 149.872,420.782 Z" data-layer="LOTES_WEB" data-geometry-index="41" data-closed="true" tabindex="0"/>
+<path id="lot-geom-042" d="M 111.419,697.235 66.647,688.992 68.914,676.674 113.146,684.818 Z" data-layer="LOTES_WEB" data-geometry-index="42" data-closed="true" tabindex="0"/>
+<path id="lot-geom-043" d="M 113.146,684.818 68.914,676.674 71.180,664.355 114.873,672.400 Z" data-layer="LOTES_WEB" data-geometry-index="43" data-closed="true" tabindex="0"/>
+<path id="lot-geom-044" d="M 114.873,672.400 71.180,664.355 73.447,652.037 116.600,659.983 Z" data-layer="LOTES_WEB" data-geometry-index="44" data-closed="true" tabindex="0"/>
+<path id="lot-geom-045" d="M 116.600,659.983 73.447,652.037 75.714,639.717 118.328,647.558 Z" data-layer="LOTES_WEB" data-geometry-index="45" data-closed="true" tabindex="0"/>
+<path id="lot-geom-046" d="M 118.328,647.558 75.714,639.718 77.981,627.397 120.061,635.140 Z" data-layer="LOTES_WEB" data-geometry-index="46" data-closed="true" tabindex="0"/>
+<path id="lot-geom-047" d="M 120.061,635.140 77.981,627.397 80.248,615.076 121.788,622.721 Z" data-layer="LOTES_WEB" data-geometry-index="47" data-closed="true" tabindex="0"/>
+<path id="lot-geom-048" d="M 121.788,622.721 80.248,615.076 82.515,602.756 123.515,610.300 Z" data-layer="LOTES_WEB" data-geometry-index="48" data-closed="true" tabindex="0"/>
+<path id="lot-geom-049" d="M 104.510,746.910 102.789,759.331 55.312,750.589 57.579,738.269 Z" data-layer="LOTES_WEB" data-geometry-index="49" data-closed="true" tabindex="0"/>
+<path id="lot-geom-050" d="M 123.515,610.300 82.515,602.756 84.782,590.436 125.242,597.881 Z" data-layer="LOTES_WEB" data-geometry-index="50" data-closed="true" tabindex="0"/>
+<path id="lot-geom-051" d="M 125.242,597.881 84.782,590.436 87.049,578.116 126.970,585.462 Z" data-layer="LOTES_WEB" data-geometry-index="51" data-closed="true" tabindex="0"/>
+<path id="lot-geom-052" d="M 128.697,573.042 89.316,565.796 91.628,553.230 130.459,560.375 Z" data-layer="LOTES_WEB" data-geometry-index="52" data-closed="true" tabindex="0"/>
+<path id="lot-geom-053" d="M 93.986,540.417 132.255,547.459 130.459,560.375 91.628,553.230 Z" data-layer="LOTES_WEB" data-geometry-index="53" data-closed="true" tabindex="0"/>
+<path id="lot-geom-054" d="M 134.051,534.543 132.255,547.459 93.986,540.417 96.343,527.604 Z" data-layer="LOTES_WEB" data-geometry-index="54" data-closed="true" tabindex="0"/>
+<path id="lot-geom-055" d="M 135.951,520.882 98.837,514.052 96.343,527.604 134.051,534.543 Z" data-layer="LOTES_WEB" data-geometry-index="55" data-closed="true" tabindex="0"/>
+<path id="lot-geom-056" d="M 135.951,520.882 137.851,507.220 101.331,500.500 98.837,514.052 Z" data-layer="LOTES_WEB" data-geometry-index="56" data-closed="true" tabindex="0"/>
+<path id="lot-geom-057" d="M 137.851,507.220 139.751,493.559 103.824,486.948 101.331,500.500 Z" data-layer="LOTES_WEB" data-geometry-index="57" data-closed="true" tabindex="0"/>
+<path id="lot-geom-058" d="M 59.847,725.949 62.114,713.630 107.965,722.072 106.237,734.491 Z" data-layer="LOTES_WEB" data-geometry-index="58" data-closed="true" tabindex="0"/>
+<path id="lot-geom-059" d="M 62.114,713.630 64.381,701.310 109.692,709.653 107.965,722.072 Z" data-layer="LOTES_WEB" data-geometry-index="59" data-closed="true" tabindex="0"/>
+<path id="lot-geom-060" d="M 64.381,701.310 66.647,688.992 111.419,697.235 109.692,709.653 Z" data-layer="LOTES_WEB" data-geometry-index="60" data-closed="true" tabindex="0"/>
+<path id="lot-geom-061" d="M 57.580,738.269 59.847,725.949 106.237,734.491 104.510,746.910 Z" data-layer="LOTES_WEB" data-geometry-index="61" data-closed="true" tabindex="0"/>
+<path id="lot-geom-062" d="M 103.824,486.948 106.409,472.903 141.720,479.401 139.751,493.559 Z" data-layer="LOTES_WEB" data-geometry-index="62" data-closed="true" tabindex="0"/>
+<path id="lot-geom-063" d="M 106.409,472.903 108.993,458.859 143.689,465.243 141.720,479.401 Z" data-layer="LOTES_WEB" data-geometry-index="63" data-closed="true" tabindex="0"/>
+<path id="lot-geom-064" d="M 108.993,458.859 111.623,444.567 145.693,450.836 143.689,465.243 Z" data-layer="LOTES_WEB" data-geometry-index="64" data-closed="true" tabindex="0"/>
+<path id="lot-geom-065" d="M 111.623,444.567 114.343,429.783 147.765,435.933 145.693,450.836 Z" data-layer="LOTES_WEB" data-geometry-index="65" data-closed="true" tabindex="0"/>
+<path id="lot-geom-066" d="M 173.697,107.216 178.872,79.091 195.600,75.863 189.302,110.088 Z" data-layer="LOTES_WEB" data-geometry-index="66" data-closed="true" tabindex="0"/>
+<path id="lot-geom-067" d="M 189.302,110.088 195.600,75.863 209.868,73.110 202.613,112.537 Z" data-layer="LOTES_WEB" data-geometry-index="67" data-closed="true" tabindex="0"/>
+<path id="lot-geom-068" d="M 209.867,73.110 222.252,70.720 217.309,97.582 214.167,114.663 202.613,112.537 Z" data-layer="LOTES_WEB" data-geometry-index="68" data-closed="true" tabindex="0"/>
+<path id="lot-geom-069" d="M 222.252,70.720 240.371,67.225 234.213,100.692 217.309,97.582 Z" data-layer="LOTES_WEB" data-geometry-index="69" data-closed="true" tabindex="0"/>
+<path id="lot-geom-070" d="M 240.371,67.224 255.706,64.265 247.817,103.195 234.213,100.692 Z" data-layer="LOTES_WEB" data-geometry-index="70" data-closed="true" tabindex="0"/>
+<path id="lot-geom-071" d="M 109.591,760.983 116.788,709.236 130.591,711.067 121.917,754.763 Z" data-layer="LOTES_WEB" data-geometry-index="71" data-closed="true" tabindex="0"/>
+<path id="lot-geom-072" d="M 121.917,754.763 130.591,711.067 146.088,713.123 140.135,745.569 Z" data-layer="LOTES_WEB" data-geometry-index="72" data-closed="true" tabindex="0"/>
+<path id="lot-geom-073" d="M 140.135,745.569 146.088,713.123 170.874,716.411 171.254,729.865 171.254,729.865 Z" data-layer="LOTES_WEB" data-geometry-index="73" data-closed="true" tabindex="0"/>
+<path id="lot-geom-074" d="M 170.187,691.367 120.239,684.421 121.964,672.013 169.790,678.665 Z" data-layer="LOTES_WEB" data-geometry-index="74" data-closed="true" tabindex="0"/>
+<path id="lot-geom-075" d="M 130.565,610.173 132.287,597.789 175.367,603.780 174.399,616.269 Z" data-layer="LOTES_WEB" data-geometry-index="75" data-closed="true" tabindex="0"/>
+<path id="lot-geom-076" d="M 181.258,527.092 180.270,540.082 141.071,534.630 142.862,521.752 181.258,527.092" data-layer="LOTES_WEB" data-geometry-index="76" data-closed="false" tabindex="0"/>
+<path id="lot-geom-077" d="M 182.260,513.851 181.258,527.092 142.862,521.752 144.687,508.626 182.260,513.851" data-layer="LOTES_WEB" data-geometry-index="77" data-closed="false" tabindex="0"/>
+<path id="lot-geom-078" d="M 183.279,500.361 182.260,513.851 144.687,508.626 146.547,495.252 183.279,500.361" data-layer="LOTES_WEB" data-geometry-index="78" data-closed="false" tabindex="0"/>
+<path id="lot-geom-079" d="M 184.317,486.620 183.279,500.361 146.547,495.252 148.442,481.631 184.317,486.620" data-layer="LOTES_WEB" data-geometry-index="79" data-closed="false" tabindex="0"/>
+<path id="lot-geom-080" d="M 185.393,472.380 184.317,486.620 148.442,481.631 150.405,467.514 185.393,472.380" data-layer="LOTES_WEB" data-geometry-index="80" data-closed="false" tabindex="0"/>
+<path id="lot-geom-081" d="M 187.676,442.905 186.503,457.892 152.403,453.149 154.470,438.287 187.676,442.905" data-layer="LOTES_WEB" data-geometry-index="81" data-closed="false" tabindex="0"/>
+<path id="lot-geom-082" d="M 186.503,457.892 185.393,472.380 150.405,467.514 152.403,453.149 186.503,457.892" data-layer="LOTES_WEB" data-geometry-index="82" data-closed="false" tabindex="0"/>
+<path id="lot-geom-083" d="M 188.704,427.783 187.676,442.906 154.470,438.287 156.552,423.311 172.713,425.556 188.704,427.783" data-layer="LOTES_WEB" data-geometry-index="83" data-closed="false" tabindex="0"/>
+<path id="lot-geom-084" d="M 170.521,703.890 118.513,696.828 120.239,684.421 170.187,691.367 Z" data-layer="LOTES_WEB" data-geometry-index="84" data-closed="true" tabindex="0"/>
+<path id="lot-geom-085" d="M 170.874,716.411 146.088,713.123 130.591,711.067 116.788,709.236 118.513,696.828 170.519,703.889 Z" data-layer="LOTES_WEB" data-geometry-index="85" data-closed="true" tabindex="0"/>
+<path id="lot-geom-086" d="M 114.343,429.783 117.108,414.753 134.138,417.887 149.872,420.782 147.765,435.933 Z" data-layer="LOTES_WEB" data-geometry-index="86" data-closed="true" tabindex="0"/>
+<path id="lot-geom-087" d="M 126.970,585.462 128.697,573.042 89.316,565.796 87.049,578.116 Z" data-layer="LOTES_WEB" data-geometry-index="87" data-closed="true" tabindex="0"/>
+<path id="lot-geom-088" d="M 181.968,375.140 189.222,335.716 202.986,338.249 196.013,377.725 Z" data-layer="LOTES_WEB" data-geometry-index="88" data-closed="true" tabindex="0"/>
+<path id="lot-geom-089" d="M 155.266,207.378 189.956,213.761 192.603,199.374 157.914,192.991 Z" data-layer="LOTES_WEB" data-geometry-index="89" data-closed="true" tabindex="0"/>
+<path id="lot-geom-090" d="M 168.226,331.853 175.318,333.158 189.222,335.716 202.986,338.249 205.603,323.446 170.947,317.069 Z" data-layer="LOTES_WEB" data-geometry-index="90" data-closed="true" tabindex="0"/>
+<path id="lot-geom-091" d="M 168.886,133.361 203.575,139.744 209.356,140.808 211.673,128.215 171.203,120.768 Z" data-layer="LOTES_WEB" data-geometry-index="91" data-closed="true" tabindex="0"/>
+<path id="lot-geom-092" d="M 198.134,169.313 233.138,175.754 236.113,161.016 200.854,154.530 Z" data-layer="LOTES_WEB" data-geometry-index="92" data-closed="true" tabindex="0"/>
+<path id="lot-geom-093" d="M 211.673,128.215 221.529,130.029 219.881,138.925 239.832,142.596 239.832,142.596 239.832,142.596 244.433,120.232 244.433,120.232 214.166,114.663 Z" data-layer="LOTES_WEB" data-geometry-index="93" data-closed="true" tabindex="0"/>
+<path id="lot-geom-094" d="M 171.203,120.768 173.697,107.216 189.302,110.088 202.614,112.537 214.167,114.663 211.673,128.215 Z" data-layer="LOTES_WEB" data-geometry-index="94" data-closed="true" tabindex="0"/>
+<path id="lot-geom-095" d="M 244.433,120.232 247.817,103.195 234.213,100.692 217.309,97.582 214.166,114.663 Z" data-layer="LOTES_WEB" data-geometry-index="95" data-closed="true" tabindex="0"/>
+</g>
+<metadata>Source: alameda-yanamarca-mapa-web.dxf. LOTES_WEB contains 95 polylines; MAPA_WEB contains visible map linework and labels. Geometry IDs are temporary and must be mapped to actual lot numbers from the project data before publication.</metadata>
+</svg>

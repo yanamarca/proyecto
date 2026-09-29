@@ -1,0 +1,190 @@
+/* =========================
+   UBICACIÓN - GENERAL
+========================= */
+.ubicacion {
+    padding: 50px 0;
+    background: #ffffff;
+    overflow: hidden;
+}
+
+.section-label-grande {
+    display: block;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    color: #c69b3b;
+    /* Dorado acorde al diseño */
+    text-transform: uppercase;
+}
+
+/* =========================
+   GRILLA (LAYOUT)
+========================= */
+.ubicacion-content {
+    margin-top: 45px;
+
+    display: grid;
+    grid-template-columns: 0.8fr 1.2fr;
+    grid-template-rows: 250px 250px;
+    gap: 30px;
+    /* Un poco más de espacio para que respiren las cajas */
+}
+
+/* TEXTO E ÍCONO */
+.ubicacion-info {
+    display: flex;
+    align-items: flex-start;
+    /* Alinea el ícono y texto arriba */
+    gap: 15px;
+    padding-right: 40px;
+}
+
+.ubicacion-icono {
+    background: #ffffff;
+    padding: 12px;
+    border-radius: 50%;
+    box-shadow: 0 8px 20px rgba(198, 155, 59, 0.15);
+    /* Sombrita dorada al ícono */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ubicacion-info p {
+    margin: 0;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #526158;
+    margin-top: 5px;
+    /* Para alinear visualmente con el centro del ícono */
+}
+
+/* =========================
+   ESTILOS COMUNES (MAPA Y VIDEO)
+========================= */
+.hover-flotar {
+    border-radius: 24px;
+    overflow: hidden;
+    /* Esto asegura que el mapa o video no se salgan del borde curvo */
+    background: #ffffff;
+
+    /* Sombra elegante y premium */
+    box-shadow: 0 10px 30px rgba(30, 55, 40, 0.08);
+
+    /* Animación de transición suave */
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ANIMACIÓN: Al pasar el mouse, las cajas flotan hacia arriba */
+.hover-flotar:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(30, 55, 40, 0.15);
+}
+
+/* =========================
+   CUADRO PEQUEÑO (MAPA)
+========================= */
+.ubicacion-mapa-iframe {
+    grid-column: 1;
+    grid-row: 2;
+}
+
+.ubicacion-mapa-iframe iframe {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* =========================
+   CUADRO GRANDE (VIDEO)
+========================= */
+.ubicacion-video-main {
+    grid-column: 2;
+    grid-row: 1 / 3;
+    position: relative;
+    border: 4px solid #ffffff;
+    /* Un marco blanco sutil estilo cuadro */
+}
+
+.ubicacion-video-main video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 20px;
+    /* Redondeo interior para no chocar con el marco blanco */
+}
+
+/* =========================
+   ANIMACIÓN DE ENTRADA (Opcional)
+========================= */
+/* Si deseas que los elementos aparezcan suavemente al cargar */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+/* Retrasos escalonados para que no aparezcan todos de golpe */
+.section-label-grande {
+    animation-delay: 0.1s;
+}
+
+.ubicacion h2 {
+    animation-delay: 0.2s;
+}
+
+.ubicacion-info {
+    animation-delay: 0.3s;
+}
+
+.ubicacion-video-main {
+    animation-delay: 0.4s;
+}
+
+.ubicacion-mapa-iframe {
+    animation-delay: 0.5s;
+}
+
+
+/* =========================
+   RESPONSIVE (CELULARES)
+========================= */
+@media (max-width: 768px) {
+    .ubicacion {
+        padding: 60px 0;
+    }
+
+    .ubicacion-content {
+        display: flex;
+        flex-direction: column;
+        margin-top: 35px;
+    }
+
+    .ubicacion-info {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .ubicacion-video-main {
+        height: 350px;
+        order: 2;
+    }
+
+    .ubicacion-mapa-iframe {
+        height: 280px;
+        order: 3;
+    }
+}

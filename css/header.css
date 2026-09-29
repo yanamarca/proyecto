@@ -1,0 +1,201 @@
+/* ========================================
+   HEADER (BARRA BLANCA FIJA)
+======================================== */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999 !important;
+
+    background: #ffffff;
+    /* Fondo blanco */
+    padding: 15px 0;
+
+    /* Sombra sutil para que se despegue del fondo */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.header-container {
+    width: min(1200px, 90%);
+    margin: auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.logo img {
+    width: 160px;
+}
+
+/* ========================================
+   NAVEGACIÓN Y ANIMACIÓN DORADA
+======================================== */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.nav a {
+    position: relative;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    color: #68736d;
+    /* Color gris/verde oscuro */
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.activo {
+    color: #1f3026;
+    /* Se oscurece al pasar el mouse */
+}
+
+/* La línea dorada debajo de los textos */
+.nav a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    /* Separación de la línea */
+    left: 0;
+    width: 0%;
+    /* Oculta por defecto */
+    height: 2px;
+    background: #c69b3b;
+    /* Color dorado */
+    border-radius: 2px;
+    transition: width 0.3s ease;
+    /* Animación de crecimiento */
+}
+
+/* Al hacer hover o si tiene la clase .activo, la línea crece al 100% */
+.nav a:hover::after,
+.nav a.activo::after {
+    width: 100%;
+}
+
+/* ========================================
+   BOTÓN WHATSAPP
+======================================== */
+.header-whatsapp {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* Espacio entre el ícono y el texto */
+    padding: 12px 24px;
+
+    border: none;
+    border-radius: 8px;
+    /* Bordes ligeramente redondeados como en tu recorte */
+
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+
+    background: #264a34;
+    /* Verde oscuro del diseño */
+    color: white;
+
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.header-whatsapp:hover {
+    background: #1a3324;
+    /* Más oscuro al hacer hover */
+    transform: translateY(-2px);
+    /* Animación sutil de salto */
+}
+
+.menu-button {
+    display: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+/* ========================================
+   RESPONSIVE (MÓVIL)
+======================================== */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 0;
+    }
+
+    .header-container {
+        width: 88%;
+        position: relative;
+    }
+
+    .logo img {
+        width: 130px;
+    }
+
+    /* Botón hamburguesa visible en móvil */
+    .menu-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+        background: transparent;
+        cursor: pointer;
+        z-index: 1001;
+    }
+
+    /* Menú desplegable móvil */
+    .nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+
+        position: fixed;
+        top: 0;
+        right: -100%;
+        /* Oculto fuera de pantalla por defecto */
+        width: 100%;
+        height: 100vh;
+        background: #ffffff;
+
+        padding: 80px 20px 40px;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        transition: right 0.35s ease;
+        z-index: 1000;
+    }
+
+    /* Clase activa para mostrar el menú móvil */
+    .nav.nav-abierto {
+        right: 0;
+    }
+
+    .nav a {
+        font-size: 18px;
+        color: #1f3026;
+    }
+
+    /* Botón de WhatsApp integrado al final del menú móvil */
+    .nav .header-whatsapp-movil {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 14px 28px;
+        border-radius: 8px;
+        background: #264a34;
+        color: white;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 600;
+        margin-top: 15px;
+    }
+
+    /* Ocultar el botón WhatsApp original de la barra */
+    .header>.header-container>.header-whatsapp {
+        display: none;
+    }
+}

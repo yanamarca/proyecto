@@ -1,0 +1,156 @@
+/* =========================
+   DIFERENCIAS - GENERAL
+========================= */
+.diferencias {
+    padding: 100px 0;
+    background: #f8f6ef;
+    /* Fondo crema clásico del diseño */
+    overflow: hidden;
+}
+
+.diferencias-layout {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    /* Columna izquierda un poco más angosta */
+    gap: 60px;
+    align-items: center;
+}
+
+.diferencias-texto h2 {
+    margin-bottom: 40px;
+    color: #1f3026;
+}
+
+/* =========================
+   LISTA DE BENEFICIOS
+========================= */
+.diferencias-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.diferencias-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+
+    /* Animación sutil al pasar el mouse sobre toda la fila */
+    transition: transform 0.3s ease;
+}
+
+.diferencias-item:hover {
+    transform: translateX(10px);
+    /* Se mueve un poquito a la derecha al hacer hover */
+}
+
+/* El círculo de fondo para el ícono */
+.icono-circulo {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    background: #e9e6d9;
+    /* Verde/gris muy clarito */
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c8a55;
+    /* Color del ícono SVG */
+
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+/* Efecto hover específico para el circulito */
+.diferencias-item:hover .icono-circulo {
+    background: #c69b3b;
+    /* Cambia a dorado */
+    color: white;
+    transform: scale(1.1);
+}
+
+.item-texto h3 {
+    margin: 0 0 5px 0;
+    font-size: 19px;
+    color: #1f3026;
+}
+
+.item-texto p {
+    margin: 0;
+    font-size: 15px;
+    color: #68736d;
+    line-height: 1.5;
+}
+
+/* =========================
+   VIDEO DERECHO (CORRECCIÓN TIKTOK)
+========================= */
+.diferencias-video {
+    width: 100%;
+    height: 450px;
+    /* La altura fija de la caja */
+    background: #000000;
+    border-radius: 24px;
+    border: 4px solid #ffffff;
+
+    /* LA MAGIA SUCEDE AQUÍ */
+    position: relative;
+    overflow: hidden;
+    /* Corta como tijera todo lo que se salga de la caja */
+}
+
+.diferencias-video video {
+    /* Forzamos al video a pegarse abajo */
+    position: absolute;
+    bottom: 0;
+    /* Lo ancla al suelo de la caja */
+    left: 0;
+
+    width: 100%;
+    height: auto;
+    /* Mantiene sus proporciones originales de TikTok */
+    min-height: 100%;
+    /* Asegura que no queden huecos vacíos */
+
+    border-radius: 20px;
+}
+
+/* =========================
+   ANIMACIONES DE ENTRADA
+========================= */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease backwards;
+}
+
+
+/* =========================
+   RESPONSIVE (CELULARES)
+========================= */
+@media (max-width: 950px) {
+    .diferencias-layout {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .diferencias-texto h2 {
+        margin-bottom: 30px;
+    }
+
+    .diferencias-item:hover {
+        transform: none;
+        /* Desactivamos el movimiento lateral en celular */
+    }
+}

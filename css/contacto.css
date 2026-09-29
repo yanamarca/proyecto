@@ -1,0 +1,71 @@
+/* =========================
+   CONTENEDOR GLOBAL OSCURO
+========================= */
+.bloque-oscuro-final {
+    background: #25362a;
+    /* Color verde oscuro del diseño */
+    margin-top: 50px;
+}
+
+/* =========================
+   07. CONTACTO (Llamado a la acción)
+========================= */
+.contacto {
+    padding: 35px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    /* Línea divisoria muy sutil */
+}
+
+.contacto-wrapper {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.contacto-titulo {
+    font-family: Georgia, serif;
+    font-size: 26px;
+    color: #ffffff;
+    margin: 0;
+}
+
+.contacto-texto {
+    color: #b5beb8;
+    /* Gris verdoso claro */
+    font-size: 15px;
+    line-height: 1.4;
+    margin: 0;
+}
+
+.btn-outline-blanco {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    background: transparent;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-blanco:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contacto-wrapper {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
