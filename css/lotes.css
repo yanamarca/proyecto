@@ -636,3 +636,140 @@ body.modo-fullscreen .overlay-modal.mostrar-modal {
 .cerrar-lote:hover {
     color: #c69b3b;
 }
+
+/* ========================================
+   MINIMAPA Y DESPLEGABLE
+======================================== */
+.minimapa-wrapper {
+    display: none;
+}
+
+.btn-toggle-minimapa {
+    display: none;
+}
+
+body.modo-fullscreen .minimapa-wrapper {
+    display: block;
+    position: absolute;
+    top: 80px;
+    right: 25px;
+    z-index: 105;
+}
+
+body.modo-fullscreen .minimapa-flotante {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background: white;
+    padding: 10px;
+    border-radius: 14px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+body.modo-fullscreen .minimapa-flotante img {
+    width: 170px;
+    border-radius: 8px;
+}
+
+/* ========================================
+   RESPONSIVE MÓVIL (MENOS CARGADO)
+======================================== */
+@media (max-width: 768px) {
+    .lotes {
+        padding: 40px 0;
+    }
+
+    /* Mapa más compacto para que no sature la vista */
+    .mapa-viewport {
+        height: 310px;
+        border-radius: 16px;
+    }
+
+    .btn-mapa-completo {
+        top: 12px;
+        left: 12px;
+        padding: 8px 14px;
+        font-size: 12px;
+    }
+
+    /* Botón flotante para desplegar el mini mapa en móvil */
+    body.modo-fullscreen .minimapa-wrapper {
+        top: 70px;
+        right: 15px;
+    }
+
+    body.modo-fullscreen .btn-toggle-minimapa {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+        background: #1f3026;
+        color: #ffffff;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+        padding: 8px 14px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: 600;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    }
+
+    /* El contenido del minimapa empieza colapsado en celular */
+    body.modo-fullscreen .minimapa-flotante {
+        display: none;
+        position: absolute;
+        top: 42px;
+        right: 0;
+        width: 190px;
+        animation: fadeIn 0.25s ease;
+    }
+
+    body.modo-fullscreen .minimapa-wrapper.abierto .minimapa-flotante {
+        display: flex;
+    }
+
+    body.modo-fullscreen .topbar-fullscreen {
+        padding: 12px 16px;
+    }
+
+    .topbar-izq span {
+        display: none;
+        /* Simplificamos texto en móvil */
+    }
+
+    .topbar-izq img {
+        width: 90px;
+    }
+
+    .btn-volver {
+        padding: 8px 14px;
+        font-size: 13px;
+    }
+
+    /* MODAL DE INFORMACIÓN DEL LOTE EN MÓVIL: TIPO BOTTOM SHEET */
+    .info-lote {
+        position: fixed;
+        bottom: -100%;
+        left: 0;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 24px 24px 0 0;
+        z-index: 10000;
+        box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.2);
+        padding: 24px 20px;
+        transition: bottom 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+        max-height: 82vh;
+        overflow-y: auto;
+    }
+
+    .info-lote.mostrar-modal {
+        display: block !important;
+        bottom: 0;
+    }
+
+    body.modo-fullscreen .info-lote {
+        top: auto;
+        left: 0;
+        transform: none;
+        width: 100%;
+        max-width: 100%;
+    }
+}

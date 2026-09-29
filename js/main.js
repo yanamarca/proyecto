@@ -47,21 +47,26 @@ document.addEventListener("DOMContentLoaded", () => {
         .catch(error => console.error("Error al cargar el mapa:", error));
 
 
-    // --- FUNCIÓN PRINCIPAL DEL MAPA INTERACTIVO ---
     function iniciarMapaInteractivo() {
         const viewport = document.getElementById("viewport");
         const mapa = document.getElementById("mapa-container");
         const tarjetaInfo = document.getElementById("info-lote");
-        const overlayModal = document.getElementById("overlay-modal"); // Referencia al fondo oscuro
+        const overlayModal = document.getElementById("overlay-modal");
 
-        // 1. Variables para el movimiento (Arrastre)
+        // 1. Variables para el movimiento
         let isDragging = false;
         let startX, startY;
         let translateX = 0, translateY = 0;
+        let scale = 1;
         let didMove = false;
 
-        mapa.style.transform = `translate(${translateX}px, ${translateY}px)`;
+        function actualizarTransform() {
+            mapa.style.transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+        }
 
+        actualizarTransform();
+
+        // Soporte Touch & Mouse sin bloquear el scroll de la página salvo que se arrastre el mapa
         viewport.addEventListener("pointerdown", (e) => {
             isDragging = true;
             didMove = false;
@@ -73,12 +78,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (!isDragging) return;
             const newX = e.clientX - startX;
             const newY = e.clientY - startY;
-            if (Math.abs(newX - translateX) > 3 || Math.abs(newY - translateY) > 3) {
+            if (Math.abs(newX - translateX) > 4 || Math.abs(newY - translateY) > 4) {
                 didMove = true;
             }
             translateX = newX;
             translateY = newY;
-            mapa.style.transform = `translate(${translateX}px, ${translateY}px)`;
+            actualizarTransform();
         });
 
         window.addEventListener("pointerup", () => {
@@ -98,8 +103,7 @@ document.addEventListener("DOMContentLoaded", () => {
         asignarLotes([49, 61, 58, 59, 60, 42, 43, 44, 45, 46, 47, 48, 50, 51, 87, 52, 53, 54, 55, 56, 57, 62, 63, 64, 65, 86, 28, 41], "B");
         asignarLotes([73, 72, 71, 85, 84, 74, 40, 39, 38, 37, 36, 75, 35, 34, 33, 32, 31, 76, 77, 78, 79, 80, 82, 81, 83, 30, 29], "C");
 
-
-        // 3. Clics en los lotes y Etiquetas
+        // 3. Clics en los lotes
         const lotesPaths = document.querySelectorAll("#lotes-web path");
         let loteActivoAnterior = null;
 
@@ -122,25 +126,21 @@ document.addEventListener("DOMContentLoaded", () => {
                 path.parentNode.appendChild(textoSVG);
             }
 
-            path.addEventListener("click", (e) => {
+            path.addEventListener("click", () => {
                 if (didMove) return;
                 if (!datos) return;
 
-                if (loteActivoAnterior) {
-                    loteActivoAnterior.classList.remove("activo");
-                }
+                if (loteActivoAnterior) loteActivoAnterior.classList.remove("activo");
                 path.classList.add("activo");
                 loteActivoAnterior = path;
 
-                // MOSTRAR TARJETA Y FONDO OSCURO
                 document.getElementById("estado-inicial").style.display = "none";
                 document.getElementById("datos-lote").style.display = "block";
 
                 tarjetaInfo.classList.add("mostrar-modal");
                 overlayModal.classList.add("mostrar-modal");
 
-                // Llenar datos
-                document.getElementById("lote-titulo").textContent = `Lote ${datos.numero} - Manzana ${datos.manzana}`;
+                document.getElementById("lote-titulo").textContent = `Lote ${datos.numero} - Mz. ${datos.manzana}`;
                 document.getElementById("lote-area").textContent = datos.area;
                 document.getElementById("lote-perimetro").textContent = datos.perimetro;
                 document.getElementById("medida-frente").textContent = datos.medidas.frente;
@@ -149,30 +149,27 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("medida-derecha").textContent = datos.medidas.derecha;
 
                 const precio = Number(datos.precioLista);
-                document.getElementById("lote-precio").textContent = `S/ ${precio.toLocaleString("es-PE", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
+                document.getElementById("lote-precio").textContent = `S/ ${precio.toLocaleString("es-PE", { minimumFractionDigits: 2 })}`;
 
                 const etiqueta = document.getElementById("lote-estado-etiqueta");
                 etiqueta.textContent = datos.estado;
-                etiqueta.className = "estado-etiqueta";
-                if (datos.estado.toLowerCase() === "disponible") etiqueta.classList.add("disponible");
-                else if (datos.estado.toLowerCase() === "reservado") etiqueta.classList.add("reservado");
+                etiqueta.className = "estado-etiqueta " + datos.estado.toLowerCase();
 
                 const btnWsp = document.getElementById("boton-whatsapp");
                 if (datos.estado === "Reservado") {
                     btnWsp.style.display = "none";
                 } else {
                     btnWsp.style.display = "flex";
-                    const mensaje = `¡Hola! Vengo de la página web.\nMe encantaría recibir más información o reservar el *Lote ${datos.numero}* de la *Manzana ${datos.manzana}* en Alameda de Yanamarca.\n\nMi nombre es: `;
+                    const mensaje = `¡Hola! Me interesa información para reservar el Lote ${datos.numero} de la Manzana ${datos.manzana} en Alameda de Yanamarca.`;
                     btnWsp.href = `https://wa.me/51968760846?text=${encodeURIComponent(mensaje)}`;
                 }
             });
         });
 
-        // 4. Botón Cerrar Tarjeta
+        // 4. Cerrar detalles
         function cerrarModalLote() {
             document.getElementById("estado-inicial").style.display = "block";
             document.getElementById("datos-lote").style.display = "none";
-
             tarjetaInfo.classList.remove("mostrar-modal");
             overlayModal.classList.remove("mostrar-modal");
 
@@ -185,20 +182,50 @@ document.addEventListener("DOMContentLoaded", () => {
         document.getElementById("cerrar-lote").addEventListener("click", cerrarModalLote);
         overlayModal.addEventListener("click", cerrarModalLote);
 
-        // 5. Lógica de Pantalla Completa
+        // 5. Función para centrar y encuadrar todo el plano
+        function centrarMapaCompleto() {
+            const vWidth = viewport.clientWidth;
+            const vHeight = viewport.clientHeight;
+            const mapaWidth = 1200; // Ancho base de tu mapa
+            const mapaHeight = 900; // Alto aproximado del mapa
+
+            // Calcular factor de escala para que entre completo
+            scale = Math.min(vWidth / mapaWidth, vHeight / mapaHeight) * 0.92;
+            if (scale > 1.2) scale = 1;
+
+            translateX = (vWidth - (mapaWidth * scale)) / 2;
+            translateY = (vHeight - (mapaHeight * scale)) / 2 + (window.innerWidth <= 768 ? 30 : 0);
+
+            actualizarTransform();
+        }
+
+        // 6. Pantalla completa y Toggle de Minimapa
         const btnAbrirFullscreen = document.getElementById("btn-abrir-pantalla-completa");
         const btnCerrarFullscreen = document.getElementById("btn-volver-normal");
-        const bodyElement = document.body;
+        const minimapaWrapper = document.getElementById("minimapa-wrapper");
+        const btnToggleMinimapa = document.getElementById("btn-toggle-minimapa");
 
         btnAbrirFullscreen.addEventListener("click", () => {
-            bodyElement.classList.add("modo-fullscreen");
-            translateX = 0; translateY = 0;
-            mapa.style.transform = `translate(${translateX}px, ${translateY}px)`;
+            document.body.classList.add("modo-fullscreen");
+            setTimeout(centrarMapaCompleto, 80);
         });
 
         btnCerrarFullscreen.addEventListener("click", () => {
-            bodyElement.classList.remove("modo-fullscreen");
+            document.body.classList.remove("modo-fullscreen");
+            scale = 1;
+            translateX = 0;
+            translateY = 0;
+            actualizarTransform();
             cerrarModalLote();
+            if (minimapaWrapper) minimapaWrapper.classList.remove("abierto");
         });
+
+        if (btnToggleMinimapa && minimapaWrapper) {
+            btnToggleMinimapa.addEventListener("click", (e) => {
+                e.stopPropagation();
+                minimapaWrapper.classList.toggle("abierto");
+            });
+        }
     }
+
 });
