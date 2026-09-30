@@ -203,13 +203,40 @@
                 disponibilidad.
             </p>
 
-            <div class="mapa-leyenda">
-                <span><span class="dot dot-a"></span> Mz. A</span>
-                <span><span class="dot dot-b"></span> Mz. B</span>
-                <span><span class="dot dot-c"></span> Mz. C</span>
+            <!-- SELECTOR DE MANZANAS -->
+            <div class="selector-manzanas">
+
+                <button class="manzana-btn activo" data-manzana="A">
+                    Manzana A
+                </button>
+
+                <button class="manzana-btn" data-manzana="B">
+                    Manzana B
+                </button>
+
+                <button class="manzana-btn" data-manzana="C">
+                    Manzana C
+                </button>
+
             </div>
 
+            <button type="button" id="btn-volver-plano-general" class="btn-volver-plano">
+                ← Plano general
+            </button>
+
             <div class="lotes-explorador">
+
+                <!-- MAPA GENERAL DEL PROYECTO -->
+                <div class="plano-general-lotes">
+
+                    <h3>Plano del proyecto</h3>
+
+                    <div class="plano-general-imagen">
+                        <img src="assets/img/mapa.png" alt="Plano general de Alameda de Yanamarca">
+                    </div>
+
+                </div>
+
                 <!-- CONTENEDOR DEL MAPA -->
                 <div class="mapa-viewport" id="viewport">
                     <button id="btn-abrir-pantalla-completa" class="btn-mapa-completo">

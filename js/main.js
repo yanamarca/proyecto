@@ -166,6 +166,214 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
 
+        // ========================================
+        // SELECTOR DE MANZANAS
+        // ========================================
+
+        const botonesManzana = document.querySelectorAll(".manzana-btn");
+
+        function enfocarManzana(manzana) {
+
+            const lotesManzana = document.querySelectorAll(
+                "#lotes-web path.manzana-" + manzana
+            );
+
+            if (!lotesManzana.length) return;
+
+            // ========================================
+            // OBTENER EL SVG REAL
+            // ========================================
+
+            const svg = mapa.querySelector("svg");
+
+            if (!svg) return;
+
+            // ========================================
+            // CALCULAR LOS LÍMITES DE LA MANZANA
+            // EN COORDENADAS DEL SVG
+            // ========================================
+
+            let minX = Infinity;
+            let minY = Infinity;
+            let maxX = -Infinity;
+            let maxY = -Infinity;
+
+            lotesManzana.forEach(path => {
+
+                const bbox = path.getBBox();
+
+                minX = Math.min(minX, bbox.x);
+                minY = Math.min(minY, bbox.y);
+
+                maxX = Math.max(
+                    maxX,
+                    bbox.x + bbox.width
+                );
+
+                maxY = Math.max(
+                    maxY,
+                    bbox.y + bbox.height
+                );
+
+            });
+
+            // ========================================
+            // CENTRO DE LA MANZANA
+            // ========================================
+
+            const centroX = (minX + maxX) / 2;
+            const centroY = (minY + maxY) / 2;
+
+            const ancho = maxX - minX;
+            const alto = maxY - minY;
+
+            // ========================================
+            // DIMENSIONES DEL SVG
+            // ========================================
+
+            const viewBox = svg.viewBox.baseVal;
+
+            const svgWidth = viewBox.width;
+            const svgHeight = viewBox.height;
+
+            // ========================================
+            // TAMAÑO DEL VIEWPORT
+            // ========================================
+
+            const viewportWidth = viewport.clientWidth;
+            const viewportHeight = viewport.clientHeight;
+
+            // ========================================
+            // ESCALA DEL SVG DENTRO DEL CONTENEDOR
+            // ========================================
+
+            const escalaBase =
+                1200 / svgWidth;
+
+            // ========================================
+            // ZOOM PARA QUE ENTRE LA MANZANA
+            // ========================================
+
+            const margen = 120;
+
+            const escalaX =
+                (viewportWidth - margen) /
+                (ancho * escalaBase);
+
+            const escalaY =
+                (viewportHeight - margen) /
+                (alto * escalaBase);
+
+            scale = Math.min(
+                escalaX,
+                escalaY
+            );
+
+            // Límites razonables
+            scale = Math.max(
+                0.50,
+                Math.min(scale, 2.5)
+            );
+
+            // ========================================
+            // CENTRAR LA MANZANA
+            // ========================================
+
+            const anchoMapa =
+                svgWidth * escalaBase;
+
+            const altoMapa =
+                svgHeight * escalaBase;
+
+            translateX =
+                (viewportWidth / 2) -
+                (centroX * escalaBase * scale);
+
+            translateY =
+                (viewportHeight / 2) -
+                (centroY * escalaBase * scale);
+
+            // ========================================
+            // APLICAR
+            // ========================================
+
+            actualizarTransform();
+        }
+
+
+        // ----------------------------------------
+        // Clic en A / B / C
+        // ----------------------------------------
+
+        // ----------------------------------------
+        // Clic en A / B / C
+        // ----------------------------------------
+
+        botonesManzana.forEach(boton => {
+
+            boton.addEventListener("click", () => {
+
+                botonesManzana.forEach(b => {
+                    b.classList.remove("activo");
+                });
+
+                boton.classList.add("activo");
+
+                const manzanaSeleccionada =
+                    boton.getAttribute("data-manzana");
+
+                /* ========================================
+                   VISTA MÓVIL
+                ======================================== */
+
+                if (window.innerWidth <= 768) {
+
+                    const planoGeneral =
+                        document.querySelector(".plano-general-lotes");
+
+                    const mapaViewport =
+                        document.getElementById("viewport");
+
+                    const btnVolver =
+                        document.getElementById("btn-volver-plano-general");
+
+                    planoGeneral.style.display = "none";
+                    mapaViewport.style.display = "block";
+                    btnVolver.classList.add("visible");
+                }
+
+                /* ========================================
+                   ENFOCAR MANZANA
+                ======================================== */
+
+                enfocarManzana(manzanaSeleccionada);
+
+            });
+
+        });
+
+        document
+            .getElementById("btn-volver-plano-general")
+            .addEventListener("click", () => {
+
+                const planoGeneral =
+                    document.querySelector(".plano-general-lotes");
+
+                const mapaViewport =
+                    document.getElementById("viewport");
+
+                const btnVolver =
+                    document.getElementById("btn-volver-plano-general");
+
+                planoGeneral.style.display = "";
+                mapaViewport.style.display = "";
+                btnVolver.classList.remove("visible");
+
+                if (typeof cerrarModalLote === "function") {
+                    cerrarModalLote();
+                }
+            });
+
         // 4. Cerrar detalles
         function cerrarModalLote() {
             document.getElementById("estado-inicial").style.display = "block";

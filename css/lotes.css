@@ -68,10 +68,35 @@
 ======================================== */
 .lotes-explorador {
     display: grid;
-    grid-template-columns: 1fr 340px;
-    /* Mapa a la izq, tarjeta a la derecha */
-    gap: 30px;
+    grid-template-columns: 280px 1fr 340px;
+    gap: 24px;
     align-items: start;
+}
+
+.plano-general-lotes {
+    background: #ffffff;
+    border: 1px solid #e5e0d5;
+    border-radius: 24px;
+    padding: 18px;
+    box-shadow: 0 15px 35px rgba(30, 55, 40, 0.08);
+}
+
+.plano-general-lotes h3 {
+    margin: 0 0 14px;
+    font-size: 17px;
+    color: #1f3026;
+    text-align: center;
+}
+
+.plano-general-imagen {
+    width: 100%;
+}
+
+.plano-general-imagen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 14px;
 }
 
 /* ========================================
@@ -181,7 +206,7 @@
 
 /* Manzana B */
 #lotes-web path.manzana-B {
-    stroke: #b18a35 !important;
+    stroke: #C08A2E !important;
     stroke-width: 1px !important;
 }
 
@@ -199,7 +224,7 @@
 
 /* Manzana C */
 #lotes-web path.manzana-C {
-    stroke: #4a5a6b !important;
+    stroke: #40566F !important;
     stroke-width: 1px !important;
 }
 
@@ -429,6 +454,10 @@ body.modo-fullscreen {
     overflow: hidden;
     /* Evita hacer scroll en la página */
     background: #f8f6ef;
+}
+
+body.modo-fullscreen .plano-general-lotes {
+    display: none !important;
 }
 
 /* Ocultar el resto de la página web */
@@ -679,6 +708,22 @@ body.modo-fullscreen .minimapa-flotante img {
         padding: 40px 0;
     }
 
+    .plano-general-lotes {
+        width: 100%;
+        padding: 16px;
+        border-radius: 18px;
+    }
+
+    .plano-general-lotes h3 {
+        font-size: 17px;
+        margin-bottom: 12px;
+    }
+
+    .plano-general-imagen img {
+        width: 100%;
+        height: auto;
+    }
+
     /* Mapa más compacto para que no sature la vista */
     .mapa-viewport {
         height: 310px;
@@ -772,4 +817,185 @@ body.modo-fullscreen .minimapa-flotante img {
         width: 100%;
         max-width: 100%;
     }
+}
+
+/* ========================================
+   SELECTOR DE MANZANAS
+======================================== */
+
+.selector-manzanas {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0 30px;
+}
+
+/* ========================================
+   RESALTAR MANZANA SELECCIONADA
+======================================== */
+
+/* Cuando se selecciona A */
+#mapa-container.manzana-A-seleccionada #lotes-web path.manzana-A {
+    fill: rgba(44, 138, 85, 0.18) !important;
+    stroke: #2C8A55 !important;
+    stroke-width: 2px !important;
+}
+
+#mapa-container.manzana-A-seleccionada #lotes-web path.manzana-B,
+#mapa-container.manzana-A-seleccionada #lotes-web path.manzana-C {
+    opacity: 0.45;
+}
+
+
+/* Cuando se selecciona B */
+#mapa-container.manzana-B-seleccionada #lotes-web path.manzana-B {
+    fill: rgba(192, 138, 46, 0.18) !important;
+    stroke: #C08A2E !important;
+    stroke-width: 2px !important;
+}
+
+#mapa-container.manzana-B-seleccionada #lotes-web path.manzana-A,
+#mapa-container.manzana-B-seleccionada #lotes-web path.manzana-C {
+    opacity: 0.45;
+}
+
+
+/* Cuando se selecciona C */
+#mapa-container.manzana-C-seleccionada #lotes-web path.manzana-C {
+    fill: rgba(64, 86, 111, 0.18) !important;
+    stroke: #40566F !important;
+    stroke-width: 2px !important;
+}
+
+#mapa-container.manzana-C-seleccionada #lotes-web path.manzana-A,
+#mapa-container.manzana-C-seleccionada #lotes-web path.manzana-B {
+    opacity: 0.45;
+}
+
+/* ========================================
+   LOTE SELECCIONADO
+======================================== */
+
+#lotes-web path.activo {
+    opacity: 1 !important;
+    stroke-width: 4px !important;
+}
+
+/* ========================================
+   LOTE SELECCIONADO - PRIORIDAD FINAL
+======================================== */
+
+#mapa-container.manzana-A-seleccionada #lotes-web path.manzana-A.activo {
+    fill: rgba(44, 138, 85, 0.65) !important;
+    stroke: #1f3026 !important;
+    stroke-width: 4px !important;
+    opacity: 1 !important;
+}
+
+#mapa-container.manzana-B-seleccionada #lotes-web path.manzana-B.activo {
+    fill: rgba(192, 138, 46, 0.65) !important;
+    stroke: #7a5715 !important;
+    stroke-width: 4px !important;
+    opacity: 1 !important;
+}
+
+#mapa-container.manzana-C-seleccionada #lotes-web path.manzana-C.activo {
+    fill: rgba(64, 86, 111, 0.65) !important;
+    stroke: #263746 !important;
+    stroke-width: 4px !important;
+    opacity: 1 !important;
+}
+
+.manzana-btn {
+    flex: 1;
+    padding: 14px 20px;
+
+    border: 1px solid #e5e0d5;
+    border-radius: 12px;
+
+    background: #ffffff;
+    color: #526158;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background-color 0.3s ease,
+        color 0.3s ease,
+        border-color 0.3s ease,
+        transform 0.25s ease;
+}
+
+.manzana-btn:hover {
+    transform: translateY(-2px);
+    border-color: #2c8a55;
+}
+
+/* Color del botón según la manzana */
+
+.manzana-btn[data-manzana="A"].activo {
+    background: #2C8A55;
+    border-color: #2C8A55;
+    color: #ffffff;
+}
+
+.manzana-btn[data-manzana="B"].activo {
+    background: #C08A2E;
+    border-color: #C08A2E;
+    color: #ffffff;
+}
+
+.manzana-btn[data-manzana="C"].activo {
+    background: #40566F;
+    border-color: #40566F;
+    color: #ffffff;
+}
+
+/* ========================================
+   SELECTOR DE MANZANAS - CELULAR
+======================================== */
+
+@media (max-width: 768px) {
+
+    .selector-manzanas {
+        gap: 8px;
+        margin: 20px 0 25px;
+    }
+
+    .manzana-btn {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    /* ========================================
+   VOLVER AL PLANO GENERAL - CELULAR
+======================================== */
+
+    .btn-volver-plano {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+
+        .btn-volver-plano {
+            display: none;
+            width: 100%;
+            margin: 0 0 15px;
+            padding: 12px 16px;
+            border: 1px solid #e5e0d5;
+            border-radius: 12px;
+            background: #ffffff;
+            color: #1f3026;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .btn-volver-plano.visible {
+            display: block;
+        }
+
+    }
+
 }
