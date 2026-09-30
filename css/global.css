@@ -47,3 +47,49 @@ h2 {
     font-size: clamp(32px, 4vw, 52px);
     line-height: 1.1;
 }
+
+/* ========================================
+   ANIMACIONES GENERALES DE BOTONES
+======================================== */
+
+.btn-primary,
+.btn-secondary,
+.header-whatsapp,
+.btn-mapa-completo,
+.btn-volver,
+.btn-ubicacion-movil,
+.btn-descargar-afuera,
+.boton-whatsapp,
+.btn-whatsapp {
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        background-color 0.25s ease,
+        border-color 0.25s ease;
+}
+
+/* Al pasar el mouse */
+.btn-primary:hover,
+.btn-secondary:hover,
+.header-whatsapp:hover,
+.btn-mapa-completo:hover,
+.btn-volver:hover,
+.btn-ubicacion-movil:hover,
+.btn-descargar-afuera:hover,
+.boton-whatsapp:hover,
+.btn-whatsapp:hover {
+    transform: translateY(-3px);
+}
+
+/* Al hacer clic */
+.btn-primary:active,
+.btn-secondary:active,
+.header-whatsapp:active,
+.btn-mapa-completo:active,
+.btn-volver:active,
+.btn-ubicacion-movil:active,
+.btn-descargar-afuera:active,
+.boton-whatsapp:active,
+.btn-whatsapp:active {
+    transform: translateY(0) scale(0.97);
+}

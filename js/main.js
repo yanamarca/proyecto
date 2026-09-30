@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let isDragging = false;
         let startX, startY;
         let translateX = 0, translateY = 0;
-        let scale = 1;
+        let scale = 0.50;
         let didMove = false;
 
         function actualizarTransform() {
@@ -190,7 +190,8 @@ document.addEventListener("DOMContentLoaded", () => {
             const mapaHeight = 900; // Alto aproximado del mapa
 
             // Calcular factor de escala para que entre completo
-            scale = Math.min(vWidth / mapaWidth, vHeight / mapaHeight) * 0.92;
+            scale = Math.min(vWidth / mapaWidth, vHeight / mapaHeight) *
+                (window.innerWidth <= 768 ? 0.92 : 0.78);
             if (scale > 1.2) scale = 1;
 
             translateX = (vWidth - (mapaWidth * scale)) / 2;

@@ -113,3 +113,80 @@
         align-items: flex-start;
     }
 }
+
+/* ========================================
+   FOOTER CENTRADO EN CELULAR
+======================================== */
+
+@media (max-width: 768px) {
+
+    .footer {
+        text-align: center;
+    }
+
+    .footer-grid {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+    }
+
+    /* Logo Alameda */
+    .footer-logo {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Línea vertical: ocultarla en celular */
+    .footer-divider {
+        display: none;
+    }
+
+    /* Logo Cabrera */
+    .footer-proyecto {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Contacto */
+    .footer-contacto {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-contacto ul {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .footer-contacto li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-bottom: 12px;
+    }
+
+    /* Enlaces */
+    .footer-enlaces {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .enlaces-grid {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        justify-content: center;
+        gap: 12px 35px;
+        text-align: center;
+    }
+}

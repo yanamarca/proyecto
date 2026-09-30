@@ -120,6 +120,15 @@
 }
 
 /* ========================================
+   COMUNÍCATE DEL MENÚ MÓVIL
+   Oculto en laptop y escritorio
+======================================== */
+
+.header-whatsapp-movil {
+    display: none;
+}
+
+/* ========================================
    RESPONSIVE (MÓVIL)
 ======================================== */
 @media (max-width: 768px) {
