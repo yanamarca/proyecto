@@ -1,4 +1,5 @@
 const lotes = {
+
   "A-01": {
     numero: "01",
     manzana: "A",
@@ -11,12 +12,13 @@ const lotes = {
       fondo: 5.59,
       derecha: 16
     },
-    precioLista: 46033.4536,
+    precioLista: 46033.45,
     precioM2: 509.84,
-    precioFinal: 43033.4536,
-    precioM2Final: 476.61372909513784,
+    precioFinal: 43033.45,
+    precioM2Final: 476.61,
     estado: "Reservado"
   },
+
   "A-02": {
     numero: "02",
     manzana: "A",
@@ -29,12 +31,13 @@ const lotes = {
       fondo: 5.64,
       derecha: 16
     },
-    precioLista: 44227.6536,
+    precioLista: 44227.65,
     precioM2: 489.84,
-    precioFinal: 41227.6536,
-    precioM2Final: 456.61372909513784,
+    precioFinal: 41227.65,
+    precioM2Final: 456.61,
     estado: "Disponible"
   },
+
   "A-03": {
     numero: "03",
     manzana: "A",
@@ -47,12 +50,13 @@ const lotes = {
       fondo: 5.66,
       derecha: 16
     },
-    precioLista: 44346.3264,
+    precioLista: 44346.33,
     precioM2: 489.69,
-    precioFinal: 41346.3264,
-    precioM2Final: 456.5627915194346,
+    precioFinal: 41346.33,
+    precioM2Final: 456.56,
     estado: "Disponible"
   },
+
   "A-04": {
     numero: "04",
     manzana: "A",
@@ -65,12 +69,13 @@ const lotes = {
       fondo: 5.66,
       derecha: 16
     },
-    precioLista: 44346.3264,
+    precioLista: 44346.33,
     precioM2: 489.69,
-    precioFinal: 41346.3264,
-    precioM2Final: 456.5627915194346,
+    precioFinal: 41346.33,
+    precioM2Final: 456.56,
     estado: "Disponible"
   },
+
   "A-05": {
     numero: "05",
     manzana: "A",
@@ -83,12 +88,13 @@ const lotes = {
       fondo: 5.64,
       derecha: 16
     },
-    precioLista: 45982.782,
+    precioLista: 45982.78,
     precioM2: 509.9,
-    precioFinal: 42982.782,
-    precioM2Final: 476.63320026613434,
+    precioFinal: 42982.78,
+    precioM2Final: 476.63,
     estado: "Disponible"
   },
+
   "A-06": {
     numero: "06",
     manzana: "A",
@@ -101,12 +107,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.08
     },
-    precioLista: 40821.8169,
+    precioLista: 40821.82,
     precioM2: 483.27,
-    precioFinal: 37821.8169,
-    precioM2Final: 447.7544323428436,
+    precioFinal: 37821.82,
+    precioM2Final: 447.75,
     estado: "Disponible"
   },
+
   "A-07": {
     numero: "07",
     manzana: "A",
@@ -119,12 +126,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.08
     },
-    precioLista: 40821.8169,
+    precioLista: 40821.82,
     precioM2: 483.27,
-    precioFinal: 37821.8169,
-    precioM2Final: 447.7544323428436,
+    precioFinal: 37821.82,
+    precioM2Final: 447.75,
     estado: "Disponible"
   },
+
   "A-08": {
     numero: "08",
     manzana: "A",
@@ -137,12 +145,13 @@ const lotes = {
       fondo: 5.98,
       derecha: 14.08
     },
-    precioLista: 40697.6628,
+    precioLista: 40697.66,
     precioM2: 483.46,
-    precioFinal: 37697.6628,
-    precioM2Final: 447.8220812544547,
+    precioFinal: 37697.66,
+    precioM2Final: 447.82,
     estado: "Disponible"
   },
+
   "A-09": {
     numero: "09",
     manzana: "A",
@@ -155,12 +164,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.08
     },
-    precioLista: 40821.8169,
+    precioLista: 40821.82,
     precioM2: 483.27,
-    precioFinal: 37821.8169,
-    precioM2Final: 447.7544323428436,
+    precioFinal: 37821.82,
+    precioM2Final: 447.75,
     estado: "Disponible"
   },
+
   "A-10": {
     numero: "10",
     manzana: "A",
@@ -173,12 +183,13 @@ const lotes = {
       fondo: 5.99,
       derecha: 14.08
     },
-    precioLista: 40779.3958,
+    precioLista: 40779.4,
     precioM2: 483.34,
-    precioFinal: 37779.3958,
-    precioM2Final: 447.78233732369324,
+    precioFinal: 37779.4,
+    precioM2Final: 447.78,
     estado: "Disponible"
   },
+
   "A-11": {
     numero: "11",
     manzana: "A",
@@ -191,12 +202,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.08
     },
-    precioLista: 40826.6496,
+    precioLista: 40826.65,
     precioM2: 483.27,
-    precioFinal: 37826.6496,
-    precioM2Final: 447.7586363636363,
+    precioFinal: 37826.65,
+    precioM2Final: 447.76,
     estado: "Disponible"
   },
+
   "A-12": {
     numero: "12",
     manzana: "A",
@@ -212,9 +224,10 @@ const lotes = {
     precioLista: 40598.22,
     precioM2: 483.6,
     precioFinal: 37598.22,
-    precioM2Final: 447.8644431209053,
+    precioM2Final: 447.86,
     estado: "Disponible"
   },
+
   "A-13": {
     numero: "13",
     manzana: "A",
@@ -227,12 +240,13 @@ const lotes = {
       fondo: 5.99,
       derecha: 14.08
     },
-    precioLista: 40770.5725,
+    precioLista: 40770.57,
     precioM2: 483.35,
-    precioFinal: 37770.5725,
-    precioM2Final: 447.78390634262007,
+    precioFinal: 37770.57,
+    precioM2Final: 447.78,
     estado: "Disponible"
   },
+
   "A-14": {
     numero: "14",
     manzana: "A",
@@ -245,12 +259,13 @@ const lotes = {
       fondo: 5.84,
       derecha: 14.08
     },
-    precioLista: 39845.628000000004,
+    precioLista: 39845.63,
     precioM2: 484.74,
-    precioFinal: 36845.628000000004,
-    precioM2Final: 448.24364963503655,
+    precioFinal: 36845.63,
+    precioM2Final: 448.24,
     estado: "Disponible"
   },
+
   "A-15": {
     numero: "15",
     manzana: "A",
@@ -263,12 +278,13 @@ const lotes = {
       fondo: 6.2,
       derecha: 14.08
     },
-    precioLista: 42034.499500000005,
+    precioLista: 42034.5,
     precioM2: 481.55,
-    precioFinal: 39034.499500000005,
-    precioM2Final: 447.1818020391798,
+    precioFinal: 39034.5,
+    precioM2Final: 447.18,
     estado: "Disponible"
   },
+
   "A-16": {
     numero: "16",
     manzana: "A",
@@ -281,12 +297,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.08
     },
-    precioLista: 40821.8169,
+    precioLista: 40821.82,
     precioM2: 483.27,
-    precioFinal: 37821.8169,
-    precioM2Final: 447.7544323428436,
+    precioFinal: 37821.82,
+    precioM2Final: 447.75,
     estado: "Disponible"
   },
+
   "A-17": {
     numero: "17",
     manzana: "A",
@@ -299,12 +316,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.08
     },
-    precioLista: 40821.8169,
+    precioLista: 40821.82,
     precioM2: 483.27,
-    precioFinal: 37821.8169,
-    precioM2Final: 447.7544323428436,
+    precioFinal: 37821.82,
+    precioM2Final: 447.75,
     estado: "Disponible"
   },
+
   "A-18": {
     numero: "18",
     manzana: "A",
@@ -317,12 +335,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.08
     },
-    precioLista: 40826.6496,
+    precioLista: 40826.65,
     precioM2: 483.27,
-    precioFinal: 37826.6496,
-    precioM2Final: 447.7586363636363,
+    precioFinal: 37826.65,
+    precioM2Final: 447.76,
     estado: "Disponible"
   },
+
   "A-19": {
     numero: "19",
     manzana: "A",
@@ -335,12 +354,13 @@ const lotes = {
       fondo: 5.11,
       derecha: 16.42
     },
-    precioLista: 40594.2234,
+    precioLista: 40594.22,
     precioM2: 483.61,
-    precioFinal: 37594.2234,
-    precioM2Final: 447.8701858470336,
+    precioFinal: 37594.22,
+    precioM2Final: 447.87,
     estado: "Disponible"
   },
+
   "A-20": {
     numero: "20",
     manzana: "A",
@@ -353,12 +373,13 @@ const lotes = {
       fondo: 5.5,
       derecha: 16.42
     },
-    precioLista: 43346.0354,
+    precioLista: 43346.04,
     precioM2: 479.81,
-    precioFinal: 40346.0354,
-    precioM2Final: 446.6021186628293,
+    precioFinal: 40346.04,
+    precioM2Final: 446.6,
     estado: "Disponible"
   },
+
   "A-21": {
     numero: "21",
     manzana: "A",
@@ -371,12 +392,13 @@ const lotes = {
       fondo: 6.33,
       derecha: 13.89
     },
-    precioLista: 43763.8008,
+    precioLista: 43763.8,
     precioM2: 546.16,
-    precioFinal: 40763.8008,
-    precioM2Final: 508.7208386372145,
+    precioFinal: 40763.8,
+    precioM2Final: 508.72,
     estado: "Disponible"
   },
+
   "A-22": {
     numero: "22",
     manzana: "A",
@@ -389,12 +411,13 @@ const lotes = {
       fondo: 5.4,
       derecha: 16
     },
-    precioLista: 42447.4402,
+    precioLista: 42447.44,
     precioM2: 525.73,
-    precioFinal: 39447.4402,
-    precioM2Final: 488.5736958137231,
+    precioFinal: 39447.44,
+    precioM2Final: 488.57,
     estado: "Disponible"
   },
+
   "A-23": {
     numero: "23",
     manzana: "A",
@@ -407,12 +430,13 @@ const lotes = {
       fondo: 4.69,
       derecha: 17.83
     },
-    precioLista: 41785.4909,
+    precioLista: 41785.49,
     precioM2: 526.73,
-    precioFinal: 38785.4909,
-    precioM2Final: 488.9132850119753,
+    precioFinal: 38785.49,
+    precioM2Final: 488.91,
     estado: "Disponible"
   },
+
   "A-24": {
     numero: "24",
     manzana: "A",
@@ -425,12 +449,13 @@ const lotes = {
       fondo: 6.86,
       derecha: 13.58
     },
-    precioLista: 43975.4842,
+    precioLista: 43975.48,
     precioM2: 523.58,
-    precioFinal: 40975.4842,
-    precioM2Final: 487.86146207881893,
+    precioFinal: 40975.48,
+    precioM2Final: 487.86,
     estado: "Disponible"
   },
+
   "A-25": {
     numero: "25",
     manzana: "A",
@@ -443,12 +468,13 @@ const lotes = {
       fondo: 5.52,
       derecha: 15.85
     },
-    precioLista: 45262.8471,
+    precioLista: 45262.85,
     precioM2: 544.09,
-    precioFinal: 42262.8471,
-    precioM2Final: 508.0279733141003,
+    precioFinal: 42262.85,
+    precioM2Final: 508.03,
     estado: "Reservado"
   },
+
   "A-26": {
     numero: "26",
     manzana: "A",
@@ -461,12 +487,13 @@ const lotes = {
       fondo: 6.93,
       derecha: 12.28
     },
-    precioLista: 42115.7936,
+    precioLista: 42115.79,
     precioM2: 492.64,
-    precioFinal: 39115.7936,
-    precioM2Final: 457.5481763949,
+    precioFinal: 39115.79,
+    precioM2Final: 457.55,
     estado: "Disponible"
   },
+
   "A-27": {
     numero: "27",
     manzana: "A",
@@ -479,12 +506,13 @@ const lotes = {
       fondo: 15.71,
       derecha: 5.5
     },
-    precioLista: 47008.4938,
+    precioLista: 47008.49,
     precioM2: 486.58,
-    precioFinal: 44008.4938,
-    precioM2Final: 455.527313942656,
+    precioFinal: 44008.49,
+    precioM2Final: 455.53,
     estado: "Disponible"
   },
+
   "A-28": {
     numero: "28",
     manzana: "A",
@@ -497,12 +525,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.31
     },
-    precioLista: 42414.597400000006,
+    precioLista: 42414.6,
     precioM2: 492.22,
-    precioFinal: 39414.597400000006,
-    precioM2Final: 457.4050992224673,
+    precioFinal: 39414.6,
+    precioM2Final: 457.41,
     estado: "Disponible"
   },
+
   "A-29": {
     numero: "29",
     manzana: "A",
@@ -518,9 +547,10 @@ const lotes = {
     precioLista: 42141.93,
     precioM2: 492.6,
     precioFinal: 39141.93,
-    precioM2Final: 457.53278784336646,
+    precioM2Final: 457.53,
     estado: "Disponible"
   },
+
   "A-30": {
     numero: "30",
     manzana: "A",
@@ -533,12 +563,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.1
     },
-    precioLista: 41868.7914,
+    precioLista: 41868.79,
     precioM2: 492.98,
-    precioFinal: 38868.7914,
-    precioM2Final: 457.6567926527729,
+    precioFinal: 38868.79,
+    precioM2Final: 457.66,
     estado: "Disponible"
   },
+
   "A-31": {
     numero: "31",
     manzana: "A",
@@ -551,12 +582,13 @@ const lotes = {
       fondo: 6.2,
       derecha: 14
     },
-    precioLista: 42823.586,
+    precioLista: 42823.59,
     precioM2: 491.66,
-    precioFinal: 39823.586,
-    precioM2Final: 457.2168312284731,
+    precioFinal: 39823.59,
+    precioM2Final: 457.22,
     estado: "Disponible"
   },
+
   "A-32": {
     numero: "32",
     manzana: "A",
@@ -569,12 +601,13 @@ const lotes = {
       fondo: 5.84,
       derecha: 13.89
     },
-    precioLista: 40324.8834,
+    precioLista: 40324.88,
     precioM2: 495.27,
-    precioFinal: 37324.8834,
-    precioM2Final: 458.42401621223286,
+    precioFinal: 37324.88,
+    precioM2Final: 458.42,
     estado: "Disponible"
   },
+
   "A-33": {
     numero: "33",
     manzana: "A",
@@ -590,9 +623,10 @@ const lotes = {
     precioLista: 41020.26,
     precioM2: 494.22,
     precioFinal: 38020.26,
-    precioM2Final: 458.075421686747,
+    precioM2Final: 458.08,
     estado: "Disponible"
   },
+
   "A-34": {
     numero: "34",
     manzana: "A",
@@ -605,12 +639,13 @@ const lotes = {
       fondo: 5.96,
       derecha: 13.85
     },
-    precioLista: 40791.3088,
+    precioLista: 40791.31,
     precioM2: 494.56,
-    precioFinal: 37791.3088,
-    precioM2Final: 458.18754607177493,
+    precioFinal: 37791.31,
+    precioM2Final: 458.19,
     estado: "Disponible"
   },
+
   "A-35": {
     numero: "35",
     manzana: "A",
@@ -623,12 +658,13 @@ const lotes = {
       fondo: 6,
       derecha: 13.9
     },
-    precioLista: 41129.6625,
+    precioLista: 41129.66,
     precioM2: 494.05,
-    precioFinal: 38129.6625,
-    precioM2Final: 458.01396396396393,
+    precioFinal: 38129.66,
+    precioM2Final: 458.01,
     estado: "Disponible"
   },
+
   "A-36": {
     numero: "36",
     manzana: "A",
@@ -641,12 +677,13 @@ const lotes = {
       fondo: 5.99,
       derecha: 13.94
     },
-    precioLista: 41196.264,
+    precioLista: 41196.26,
     precioM2: 493.96,
-    precioFinal: 38196.264,
-    precioM2Final: 457.98877697841726,
+    precioFinal: 38196.26,
+    precioM2Final: 457.99,
     estado: "Disponible"
   },
+
   "A-37": {
     numero: "37",
     manzana: "A",
@@ -659,12 +696,13 @@ const lotes = {
       fondo: 5.98,
       derecha: 14.02
     },
-    precioLista: 41349.887500000004,
+    precioLista: 41349.89,
     precioM2: 493.73,
-    precioFinal: 38349.887500000004,
-    precioM2Final: 457.909104477612,
+    precioFinal: 38349.89,
+    precioM2Final: 457.91,
     estado: "Disponible"
   },
+
   "A-38": {
     numero: "38",
     manzana: "A",
@@ -680,9 +718,10 @@ const lotes = {
     precioLista: 41336.75,
     precioM2: 493.75,
     precioFinal: 38336.75,
-    precioM2Final: 457.9162685140946,
+    precioM2Final: 457.92,
     estado: "Disponible"
   },
+
   "A-39": {
     numero: "39",
     manzana: "A",
@@ -695,12 +734,13 @@ const lotes = {
       fondo: 6,
       derecha: 14.06
     },
-    precioLista: 41574.7266,
+    precioLista: 41574.73,
     precioM2: 493.41,
-    precioFinal: 38574.7266,
-    precioM2Final: 457.8059173985284,
+    precioFinal: 38574.73,
+    precioM2Final: 457.81,
     estado: "Disponible"
   },
+
   "A-40": {
     numero: "40",
     manzana: "A",
@@ -713,16 +753,16 @@ const lotes = {
       fondo: 6,
       derecha: 14.06
     },
-    precioLista: 41688.6448,
+    precioLista: 41688.64,
     precioM2: 493.24,
-    precioFinal: 38688.6448,
-    precioM2Final: 457.7454424988169,
+    precioFinal: 38688.64,
+    precioM2Final: 457.75,
     estado: "Disponible"
   },
   "B-01": {
     numero: "01",
     manzana: "B",
-    ubicacion: "doble frontis",
+    ubicacion: "Doble Frontis",
     area: 95.79,
     perimetro: 48.32,
     medidas: {
@@ -731,12 +771,13 @@ const lotes = {
       fondo: 5,
       derecha: 19.7
     },
-    precioLista: 42816.2142,
+    precioLista: 42816.21,
     precioM2: 446.98,
-    precioFinal: 39816.2142,
+    precioFinal: 39816.21,
     precioM2Final: 415.66,
     estado: "Disponible"
   },
+
   "B-02": {
     numero: "02",
     manzana: "B",
@@ -749,12 +790,13 @@ const lotes = {
       fondo: 5,
       derecha: 19.05
     },
-    precioLista: 42375.6688,
+    precioLista: 42375.67,
     precioM2: 447.52,
-    precioFinal: 39375.6688,
+    precioFinal: 39375.67,
     precioM2Final: 415.84,
     estado: "Disponible"
   },
+
   "B-03": {
     numero: "03",
     manzana: "B",
@@ -767,12 +809,13 @@ const lotes = {
       fondo: 5,
       derecha: 18.83
     },
-    precioLista: 41935.8072,
+    precioLista: 41935.81,
     precioM2: 448.08,
-    precioFinal: 38935.8072,
+    precioFinal: 38935.81,
     precioM2Final: 416.03,
     estado: "Disponible"
   },
+
   "B-04": {
     numero: "04",
     manzana: "B",
@@ -785,12 +828,13 @@ const lotes = {
       fondo: 5,
       derecha: 18.61
     },
-    precioLista: 41495.638499999994,
+    precioLista: 41495.64,
     precioM2: 448.65,
-    precioFinal: 38495.638499999994,
+    precioFinal: 38495.64,
     precioM2Final: 416.22,
     estado: "Disponible"
   },
+
   "B-05": {
     numero: "05",
     manzana: "B",
@@ -803,12 +847,13 @@ const lotes = {
       fondo: 5,
       derecha: 18.39
     },
-    precioLista: 41056.043600000005,
+    precioLista: 41056.04,
     precioM2: 449.24,
-    precioFinal: 38056.043600000005,
+    precioFinal: 38056.04,
     precioM2Final: 416.41,
     estado: "Disponible"
   },
+
   "B-06": {
     numero: "06",
     manzana: "B",
@@ -821,12 +866,13 @@ const lotes = {
       fondo: 5,
       derecha: 18.17
     },
-    precioLista: 40616.0536,
+    precioLista: 40616.05,
     precioM2: 449.84,
-    precioFinal: 37616.0536,
+    precioFinal: 37616.05,
     precioM2Final: 416.61,
     estado: "Disponible"
   },
+
   "B-07": {
     numero: "07",
     manzana: "B",
@@ -845,6 +891,7 @@ const lotes = {
     precioM2Final: 416.82,
     estado: "Disponible"
   },
+
   "B-08": {
     numero: "08",
     manzana: "B",
@@ -857,12 +904,13 @@ const lotes = {
       fondo: 5,
       derecha: 17.73
     },
-    precioLista: 40621.147999999994,
+    precioLista: 40621.15,
     precioM2: 461.08,
-    precioFinal: 37621.147999999994,
+    precioFinal: 37621.15,
     precioM2Final: 427.03,
     estado: "Disponible"
   },
+
   "B-09": {
     numero: "09",
     manzana: "B",
@@ -875,12 +923,13 @@ const lotes = {
       fondo: 5,
       derecha: 17.51
     },
-    precioLista: 40186.368,
+    precioLista: 40186.37,
     precioM2: 461.7,
-    precioFinal: 37186.368,
+    precioFinal: 37186.37,
     precioM2Final: 427.23,
     estado: "Disponible"
   },
+
   "B-10": {
     numero: "10",
     manzana: "B",
@@ -893,12 +942,13 @@ const lotes = {
       fondo: 5,
       derecha: 17.29
     },
-    precioLista: 39735.2184,
+    precioLista: 39735.22,
     precioM2: 462.36,
-    precioFinal: 36735.2184,
+    precioFinal: 36735.22,
     precioM2Final: 427.45,
     estado: "Disponible"
   },
+
   "B-11": {
     numero: "11",
     manzana: "B",
@@ -911,12 +961,13 @@ const lotes = {
       fondo: 5,
       derecha: 17.08
     },
-    precioLista: 39288.095499999996,
+    precioLista: 39288.1,
     precioM2: 463.03,
-    precioFinal: 36288.095499999996,
+    precioFinal: 36288.1,
     precioM2Final: 427.68,
     estado: "Disponible"
   },
+
   "B-12": {
     numero: "12",
     manzana: "B",
@@ -929,12 +980,13 @@ const lotes = {
       fondo: 5,
       derecha: 16.86
     },
-    precioLista: 39674.887500000004,
+    precioLista: 39674.89,
     precioM2: 473.73,
-    precioFinal: 36674.887500000004,
+    precioFinal: 36674.89,
     precioM2Final: 437.91,
     estado: "Disponible"
   },
+
   "B-13": {
     numero: "13",
     manzana: "B",
@@ -947,12 +999,13 @@ const lotes = {
       fondo: 5,
       derecha: 16.64
     },
-    precioLista: 39213.2925,
+    precioLista: 39213.29,
     precioM2: 474.45,
-    precioFinal: 36213.2925,
+    precioFinal: 36213.29,
     precioM2Final: 438.15,
     estado: "Disponible"
   },
+
   "B-14": {
     numero: "14",
     manzana: "B",
@@ -965,12 +1018,13 @@ const lotes = {
       fondo: 5,
       derecha: 16.42
     },
-    precioLista: 38754.8652,
+    precioLista: 38754.87,
     precioM2: 475.17,
-    precioFinal: 35754.8652,
+    precioFinal: 35754.87,
     precioM2Final: 438.39,
     estado: "Disponible"
   },
+
   "B-15": {
     numero: "15",
     manzana: "B",
@@ -983,12 +1037,13 @@ const lotes = {
       fondo: 5,
       derecha: 16.2
     },
-    precioLista: 39097.9278,
+    precioLista: 39097.93,
     precioM2: 485.93,
-    precioFinal: 36097.9278,
+    precioFinal: 36097.93,
     precioM2Final: 448.64,
     estado: "Disponible"
   },
+
   "B-16": {
     numero: "16",
     manzana: "B",
@@ -1001,12 +1056,13 @@ const lotes = {
       fondo: 5.1,
       derecha: 15.98
     },
-    precioLista: 39304.464,
+    precioLista: 39304.46,
     precioM2: 485.6,
-    precioFinal: 36304.464,
+    precioFinal: 36304.46,
     precioM2Final: 448.53,
     estado: "Disponible"
   },
+
   "B-17": {
     numero: "17",
     manzana: "B",
@@ -1019,12 +1075,13 @@ const lotes = {
       fondo: 5.2,
       derecha: 15.76
     },
-    precioLista: 39484.8216,
+    precioLista: 39484.82,
     precioM2: 485.31,
-    precioFinal: 36484.8216,
+    precioFinal: 36484.82,
     precioM2Final: 448.44,
     estado: "Disponible"
   },
+
   "B-18": {
     numero: "18",
     manzana: "B",
@@ -1037,12 +1094,13 @@ const lotes = {
       fondo: 5.2,
       derecha: 15.53
     },
-    precioLista: 38973.0421,
+    precioLista: 38973.04,
     precioM2: 486.13,
-    precioFinal: 35973.0421,
+    precioFinal: 35973.04,
     precioM2Final: 448.71,
     estado: "Disponible"
   },
+
   "B-19": {
     numero: "19",
     manzana: "B",
@@ -1055,12 +1113,13 @@ const lotes = {
       fondo: 5.5,
       derecha: 15.3
     },
-    precioLista: 40409.653900000005,
+    precioLista: 40409.65,
     precioM2: 483.89,
-    precioFinal: 37409.653900000005,
+    precioFinal: 37409.65,
     precioM2Final: 447.96,
     estado: "Disponible"
   },
+
   "B-20": {
     numero: "20",
     manzana: "B",
@@ -1073,12 +1132,13 @@ const lotes = {
       fondo: 5.5,
       derecha: 15.06
     },
-    precioLista: 39837.5768,
+    precioLista: 39837.58,
     precioM2: 484.76,
-    precioFinal: 36837.5768,
+    precioFinal: 36837.58,
     precioM2Final: 448.25,
     estado: "Disponible"
   },
+
   "B-21": {
     numero: "21",
     manzana: "B",
@@ -1091,12 +1151,13 @@ const lotes = {
       fondo: 5.5,
       derecha: 14.82
     },
-    precioLista: 39269.659,
+    precioLista: 39269.66,
     precioM2: 485.65,
-    precioFinal: 36269.659,
+    precioFinal: 36269.66,
     precioM2Final: 448.55,
     estado: "Disponible"
   },
+
   "B-22": {
     numero: "22",
     manzana: "B",
@@ -1109,12 +1170,13 @@ const lotes = {
       fondo: 5.7,
       derecha: 14.58
     },
-    precioLista: 39931.864,
+    precioLista: 39931.86,
     precioM2: 484.61,
-    precioFinal: 36931.864,
+    precioFinal: 36931.86,
     precioM2Final: 448.2,
     estado: "Disponible"
   },
+
   "B-23": {
     numero: "23",
     manzana: "B",
@@ -1127,12 +1189,13 @@ const lotes = {
       fondo: 5.7,
       derecha: 14.33
     },
-    precioLista: 39317.412599999996,
+    precioLista: 39317.41,
     precioM2: 485.58,
-    precioFinal: 36317.412599999996,
+    precioFinal: 36317.41,
     precioM2Final: 448.53,
     estado: "Disponible"
   },
+
   "B-24": {
     numero: "24",
     manzana: "B",
@@ -1145,12 +1208,13 @@ const lotes = {
       fondo: 5.8,
       derecha: 14.08
     },
-    precioLista: 39299.60800000001,
+    precioLista: 39299.61,
     precioM2: 485.6,
-    precioFinal: 36299.60800000001,
+    precioFinal: 36299.61,
     precioM2Final: 448.53,
     estado: "Disponible"
   },
+
   "B-25": {
     numero: "25",
     manzana: "B",
@@ -1163,12 +1227,13 @@ const lotes = {
       fondo: 6,
       derecha: 13.83
     },
-    precioLista: 39832.7292,
+    precioLista: 39832.73,
     precioM2: 484.76,
-    precioFinal: 36832.7292,
+    precioFinal: 36832.73,
     precioM2Final: 448.25,
     estado: "Disponible"
   },
+
   "B-26": {
     numero: "26",
     manzana: "B",
@@ -1181,12 +1246,13 @@ const lotes = {
       fondo: 6.1,
       derecha: 13.56
     },
-    precioLista: 39729.4956,
+    precioLista: 39729.5,
     precioM2: 484.92,
-    precioFinal: 36729.4956,
+    precioFinal: 36729.5,
     precioM2Final: 448.31,
     estado: "Disponible"
   },
+
   "B-27": {
     numero: "27",
     manzana: "B",
@@ -1199,12 +1265,13 @@ const lotes = {
       fondo: 6.91,
       derecha: 12.45
     },
-    precioLista: 41341.8939,
+    precioLista: 41341.89,
     precioM2: 504.97,
-    precioFinal: 38341.8939,
+    precioFinal: 38341.89,
     precioM2Final: 468.32,
     estado: "Disponible"
   },
+
   "B-28": {
     numero: "28",
     manzana: "B",
@@ -1217,9 +1284,9 @@ const lotes = {
       fondo: 6.39,
       derecha: 12.45
     },
-    precioLista: 42938.0952,
+    precioLista: 42938.1,
     precioM2: 536.19,
-    precioFinal: 39938.0952,
+    precioFinal: 39938.1,
     precioM2Final: 498.73,
     estado: "Reservado"
   },
@@ -1235,12 +1302,13 @@ const lotes = {
       fondo: 9.98,
       derecha: 13.17
     },
-    precioLista: 47263.6125,
+    precioLista: 47263.61,
     precioM2: 475.25,
-    precioFinal: 44263.6125,
+    precioFinal: 44263.61,
     precioM2Final: 445.08,
     estado: "Disponible"
   },
+
   "C-02": {
     numero: "02",
     manzana: "C",
@@ -1253,12 +1321,13 @@ const lotes = {
       fondo: 6.24,
       derecha: 17.78
     },
-    precioLista: 43736.3692,
+    precioLista: 43736.37,
     precioM2: 445.88,
-    precioFinal: 40736.3692,
+    precioFinal: 40736.37,
     precioM2Final: 415.29,
     estado: "Disponible"
   },
+
   "C-03": {
     numero: "03",
     manzana: "C",
@@ -1271,12 +1340,13 @@ const lotes = {
       fondo: 5.56,
       derecha: 20.85
     },
-    precioLista: 46016.6955,
+    precioLista: 46016.7,
     precioM2: 476.61,
-    precioFinal: 43016.6955,
+    precioFinal: 43016.7,
     precioM2Final: 445.54,
     estado: "Disponible"
   },
+
   "C-04": {
     numero: "04",
     manzana: "C",
@@ -1289,12 +1359,13 @@ const lotes = {
       fondo: 5,
       derecha: 20.95
     },
-    precioLista: 49069.888,
+    precioLista: 49069.89,
     precioM2: 462.4,
-    precioFinal: 46069.888,
+    precioFinal: 46069.89,
     precioM2Final: 434.13,
     estado: "Disponible"
   },
+
   "C-05": {
     numero: "05",
     manzana: "C",
@@ -1307,12 +1378,13 @@ const lotes = {
       fondo: 5,
       derecha: 20.13
     },
-    precioLista: 47343.8611,
+    precioLista: 47343.86,
     precioM2: 464.11,
-    precioFinal: 44343.8611,
+    precioFinal: 44343.86,
     precioM2Final: 434.7,
     estado: "Disponible"
   },
+
   "C-06": {
     numero: "06",
     manzana: "C",
@@ -1325,12 +1397,13 @@ const lotes = {
       fondo: 5.07,
       derecha: 19.27
     },
-    precioLista: 45870.465,
+    precioLista: 45870.47,
     precioM2: 465.69,
-    precioFinal: 42870.465,
+    precioFinal: 42870.47,
     precioM2Final: 435.23,
     estado: "Disponible"
   },
+
   "C-07": {
     numero: "07",
     manzana: "C",
@@ -1343,12 +1416,13 @@ const lotes = {
       fondo: 4.49,
       derecha: 18.49
     },
-    precioLista: 43589.3345,
+    precioLista: 43589.33,
     precioM2: 468.35,
-    precioFinal: 40589.3345,
+    precioFinal: 40589.33,
     precioM2Final: 436.12,
     estado: "Disponible"
   },
+
   "C-08": {
     numero: "08",
     manzana: "C",
@@ -1361,12 +1435,13 @@ const lotes = {
       fondo: 5,
       derecha: 18.29
     },
-    precioLista: 43076.7315,
+    precioLista: 43076.73,
     precioM2: 468.99,
-    precioFinal: 40076.7315,
+    precioFinal: 40076.73,
     precioM2Final: 436.33,
     estado: "Disponible"
   },
+
   "C-09": {
     numero: "09",
     manzana: "C",
@@ -1379,12 +1454,13 @@ const lotes = {
       fondo: 5,
       derecha: 18.09
     },
-    precioLista: 42656.8005,
+    precioLista: 42656.8,
     precioM2: 469.53,
-    precioFinal: 39656.8005,
+    precioFinal: 39656.8,
     precioM2Final: 436.51,
     estado: "Disponible"
   },
+
   "C-10": {
     numero: "10",
     manzana: "C",
@@ -1397,12 +1473,13 @@ const lotes = {
       fondo: 5,
       derecha: 17.89
     },
-    precioLista: 43135.187999999995,
+    precioLista: 43135.19,
     precioM2: 480.08,
-    precioFinal: 40135.187999999995,
+    precioFinal: 40135.19,
     precioM2Final: 446.69,
     estado: "Disponible"
   },
+
   "C-11": {
     numero: "11",
     manzana: "C",
@@ -1415,12 +1492,13 @@ const lotes = {
       fondo: 5,
       derecha: 17.66
     },
-    precioLista: 42679.57720000001,
+    precioLista: 42679.58,
     precioM2: 480.68,
-    precioFinal: 39679.57720000001,
+    precioFinal: 39679.58,
     precioM2Final: 446.89,
     estado: "Disponible"
   },
+
   "C-12": {
     numero: "12",
     manzana: "C",
@@ -1433,12 +1511,13 @@ const lotes = {
       fondo: 5,
       derecha: 17.36
     },
-    precioLista: 42082.226,
+    precioLista: 42082.23,
     precioM2: 481.49,
-    precioFinal: 39082.226,
+    precioFinal: 39082.23,
     precioM2Final: 447.16,
     estado: "Disponible"
   },
+
   "C-13": {
     numero: "13",
     manzana: "C",
@@ -1451,12 +1530,13 @@ const lotes = {
       fondo: 5,
       derecha: 17.06
     },
-    precioLista: 41432.4771,
+    precioLista: 41432.48,
     precioM2: 482.39,
-    precioFinal: 38432.4771,
+    precioFinal: 38432.48,
     precioM2Final: 447.46,
     estado: "Disponible"
   },
+
   "C-14": {
     numero: "14",
     manzana: "C",
@@ -1469,12 +1549,13 @@ const lotes = {
       fondo: 5,
       derecha: 16.75
     },
-    precioLista: 40779.3958,
+    precioLista: 40779.4,
     precioM2: 483.34,
-    precioFinal: 37779.3958,
+    precioFinal: 37779.4,
     precioM2Final: 447.78,
     estado: "Disponible"
   },
+
   "C-15": {
     numero: "15",
     manzana: "C",
@@ -1487,12 +1568,13 @@ const lotes = {
       fondo: 5,
       derecha: 16.45
     },
-    precioLista: 40125.912,
+    precioLista: 40125.91,
     precioM2: 484.32,
-    precioFinal: 37125.912,
+    precioFinal: 37125.91,
     precioM2Final: 448.11,
     estado: "Disponible"
   },
+
   "C-16": {
     numero: "16",
     manzana: "C",
@@ -1505,12 +1587,13 @@ const lotes = {
       fondo: 5.3,
       derecha: 16.12
     },
-    precioLista: 41540.1536,
+    precioLista: 41540.15,
     precioM2: 482.24,
-    precioFinal: 38540.1536,
+    precioFinal: 38540.15,
     precioM2Final: 447.41,
     estado: "Disponible"
   },
+
   "C-17": {
     numero: "17",
     manzana: "C",
@@ -1523,12 +1606,13 @@ const lotes = {
       fondo: 5.2,
       derecha: 15.8
     },
-    precioLista: 40112.2106,
+    precioLista: 40112.21,
     precioM2: 484.33,
-    precioFinal: 37112.2106,
+    precioFinal: 37112.21,
     precioM2Final: 448.11,
     estado: "Disponible"
   },
+
   "C-18": {
     numero: "18",
     manzana: "C",
@@ -1541,12 +1625,13 @@ const lotes = {
       fondo: 5.2,
       derecha: 15.47
     },
-    precioLista: 40201.6244,
+    precioLista: 40201.62,
     precioM2: 495.46,
-    precioFinal: 37201.6244,
+    precioFinal: 37201.62,
     precioM2Final: 458.49,
     estado: "Disponible"
   },
+
   "C-19": {
     numero: "19",
     manzana: "C",
@@ -1559,12 +1644,13 @@ const lotes = {
       fondo: 5.3,
       derecha: 15.14
     },
-    precioLista: 40127.1126,
+    precioLista: 40127.11,
     precioM2: 495.58,
-    precioFinal: 37127.1126,
+    precioFinal: 37127.11,
     precioM2Final: 458.53,
     estado: "Disponible"
   },
+
   "C-20": {
     numero: "20",
     manzana: "C",
@@ -1577,12 +1663,13 @@ const lotes = {
       fondo: 5.4,
       derecha: 14.8
     },
-    precioLista: 40003.6813,
+    precioLista: 40003.68,
     precioM2: 495.77,
-    precioFinal: 37003.6813,
+    precioFinal: 37003.68,
     precioM2Final: 458.59,
     estado: "Disponible"
   },
+
   "C-21": {
     numero: "21",
     manzana: "C",
@@ -1595,12 +1682,13 @@ const lotes = {
       fondo: 5.5,
       derecha: 14.46
     },
-    precioLista: 39836.1693,
+    precioLista: 39836.17,
     precioM2: 496.03,
-    precioFinal: 36836.1693,
+    precioFinal: 36836.17,
     precioM2Final: 458.68,
     estado: "Disponible"
   },
+
   "C-22": {
     numero: "22",
     manzana: "C",
@@ -1613,12 +1701,13 @@ const lotes = {
       fondo: 5.7,
       derecha: 14.1
     },
-    precioLista: 40241.342,
+    precioLista: 40241.34,
     precioM2: 495.4,
-    precioFinal: 37241.342,
+    precioFinal: 37241.34,
     precioM2Final: 458.47,
     estado: "Disponible"
   },
+
   "C-23": {
     numero: "23",
     manzana: "C",
@@ -1631,12 +1720,13 @@ const lotes = {
       fondo: 5.8,
       derecha: 13.74
     },
-    precioLista: 39959.7456,
+    precioLista: 39959.75,
     precioM2: 495.84,
-    precioFinal: 36959.7456,
+    precioFinal: 36959.75,
     precioM2Final: 458.61,
     estado: "Disponible"
   },
+
   "C-24": {
     numero: "24",
     manzana: "C",
@@ -1649,12 +1739,13 @@ const lotes = {
       fondo: 6,
       derecha: 13.38
     },
-    precioLista: 40237.2002,
+    precioLista: 40237.2,
     precioM2: 495.41,
-    precioFinal: 37237.2002,
+    precioFinal: 37237.2,
     precioM2Final: 458.47,
     estado: "Disponible"
   },
+
   "C-25": {
     numero: "25",
     manzana: "C",
@@ -1667,12 +1758,13 @@ const lotes = {
       fondo: 6.05,
       derecha: 12.95
     },
-    precioLista: 39471.3576,
+    precioLista: 39471.36,
     precioM2: 496.62,
-    precioFinal: 36471.3576,
+    precioFinal: 36471.36,
     precioM2Final: 458.87,
     estado: "Disponible"
   },
+
   "C-26": {
     numero: "26",
     manzana: "C",
@@ -1685,12 +1777,13 @@ const lotes = {
       fondo: 6.51,
       derecha: 12.69
     },
-    precioLista: 42603.0957,
+    precioLista: 42603.1,
     precioM2: 525.51,
-    precioFinal: 39603.0957,
+    precioFinal: 39603.1,
     precioM2Final: 488.5,
     estado: "Reservado"
   },
+
   "C-27": {
     numero: "27",
     manzana: "C",
@@ -1703,10 +1796,11 @@ const lotes = {
       fondo: 6.44,
       derecha: 12.42
     },
-    precioLista: 42803.922,
+    precioLista: 42803.92,
     precioM2: 536.39,
-    precioFinal: 39803.922,
+    precioFinal: 39803.92,
     precioM2Final: 498.8,
     estado: "Disponible"
   }
+
 };
