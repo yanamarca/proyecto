@@ -27,21 +27,45 @@
 
 .tab-btn {
     flex: 1;
-    /* Todos miden lo mismo */
     display: flex;
+    flex-direction: column;
+    /* ícono arriba, texto abajo */
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    padding: 15px;
-    border-radius: 12px;
+    gap: 10px;
+    padding: 22px 15px;
+    border-radius: 16px;
     border: 1px solid #e5e0d5;
     background: #ffffff;
     color: #526158;
-    font-size: 15px;
-    font-weight: 600;
+    font-size: 16px;
+    font-weight: 700;
     cursor: pointer;
     position: relative;
     transition: all 0.3s ease;
+}
+
+.tab-btn svg {
+    width: 44px;
+    height: 44px;
+    padding: 9px;
+    box-sizing: content-box;
+    border-radius: 50%;
+    background: rgba(198, 155, 59, 0.15);
+    color: #c69b3b;
+    /* dorado llamativo */
+    stroke-width: 2;
+    transition: all 0.3s ease;
+}
+
+.tab-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 22px rgba(30, 55, 40, 0.12);
+}
+
+.tab-btn.activo svg {
+    background: #ffffff;
+    color: #476a4b;
 }
 
 /* Botón Activo (Verde) */
@@ -125,7 +149,18 @@
     }
 
     .tabs-header {
-        flex-direction: column;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    .tab-btn {
+        padding: 16px 8px;
+        font-size: 14px;
+    }
+
+    .tab-btn svg {
+        width: 34px;
+        height: 34px;
     }
 
     .tab-btn.activo::after {

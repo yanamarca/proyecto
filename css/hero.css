@@ -38,6 +38,16 @@
     /* Se pone por encima del video */
 }
 
+/* LOGO CABRERA CAPITAL (ARRIBA A LA DERECHA) */
+.hero-logo {
+    position: absolute;
+    top: 120px;
+    /* Debajo del header blanco */
+    right: 5%;
+    width: 150px;
+    z-index: 2;
+}
+
 .hero-content {
     position: relative;
     z-index: 2;
@@ -117,12 +127,20 @@
     color: white;
 }
 
+/* ========================================
+   RESPONSIVE (MÓVIL)
+======================================== */
 @media (max-width: 768px) {
 
     .hero {
         min-height: 100svh;
-
         background-position: 65% center;
+    }
+
+    .hero-logo {
+        top: 90px;
+        right: 6%;
+        width: 100px;
     }
 
     .hero-content {

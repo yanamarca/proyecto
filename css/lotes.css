@@ -49,19 +49,18 @@
 
 .dot.dot-a {
     background: #2c8a55;
+    /* Verde Manzana A */
 }
 
-/* Verde Manzana A */
 .dot.dot-b {
     background: #b18a35;
+    /* Bronce Manzana B */
 }
 
-/* Bronce Manzana B */
 .dot.dot-c {
     background: #4a5a6b;
+    /* Azul Manzana C */
 }
-
-/* Azul Manzana C */
 
 /* ========================================
    LAYOUT: EXPLORADOR (GRID)
@@ -105,7 +104,6 @@
 .mapa-viewport {
     width: 100%;
     height: 480px;
-    /* Caja cortada/reducida como pediste */
     background: #ffffff;
     border: 1px solid #e5e0d5;
     border-radius: 24px;
@@ -126,11 +124,9 @@
     top: 20px;
     left: 20px;
     z-index: 10;
-
     display: flex;
     align-items: center;
     gap: 8px;
-
     background: #1f3026;
     color: white;
     padding: 10px 18px;
@@ -138,7 +134,6 @@
     font-size: 13px;
     font-weight: 600;
     text-decoration: none;
-
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
@@ -149,7 +144,7 @@
 }
 
 /* ========================================
-   MAPA INTERNO Y FONDO PNG
+   MAPA INTERNO (CONTIENE EL SVG NUEVO)
 ======================================== */
 .mapa-container {
     width: 1200px;
@@ -158,12 +153,6 @@
     left: 0;
     transform-origin: 0 0;
     will-change: transform;
-
-    /* FONDO PNG DEL MAPA QUE SE MUEVE JUNTO CON LOS LOTES */
-    background-image: url('../assets/plano/alameda_yanamarca_mapa_overlay_manzanas.png');
-    background-size: 100% auto;
-    background-repeat: no-repeat;
-    background-position: top left;
 }
 
 .mapa-container svg {
@@ -171,91 +160,217 @@
     height: auto;
     display: block;
     pointer-events: none;
-    /* Crucial para drag */
+    /* Crucial para poder arrastrar desde cualquier lado */
 }
 
-/* Lotes dentro del SVG */
-#lotes-web path {
+/* Lotes interactivos dentro del SVG */
+svg .lote {
     pointer-events: auto;
     cursor: pointer;
-    transition: fill 0.3s ease, stroke 0.3s ease;
+    transition: fill 0.3s ease, stroke 0.3s ease, stroke-width 0.3s ease;
     outline: none !important;
-    /* Quita el recuadro negro molesto */
+
+    /* ¡ESTO SOLUCIONA EL PROBLEMA! Forzamos la opacidad para anular el estilo del SVG */
+    fill-opacity: 1 !important;
+    fill: transparent !important;
 }
 
 /* ========================================
-   COLORES Y ESTADOS POR MANZANA
+   COLORES Y ESTADOS POR MANZANA (Sobreescribiendo el SVG)
 ======================================== */
 /* Manzana A */
-#lotes-web path.manzana-A {
+svg .lote[data-manzana="A"] {
     stroke: #2c8a55 !important;
-    stroke-width: 1px !important;
+    stroke-width: 0.8px !important;
 }
 
-#lotes-web path.manzana-A:hover {
-    fill: rgba(44, 138, 85, 0.4) !important;
-    stroke: #2c8a55 !important;
-    stroke-width: 2px !important;
-}
-
-#lotes-web path.manzana-A.activo {
+svg .lote[data-manzana="A"]:hover {
     fill: rgba(44, 138, 85, 0.5) !important;
-    stroke: #2c8a55 !important;
-    stroke-width: 3px !important;
+    stroke-width: 1.5px !important;
+}
+
+svg .lote[data-manzana="A"].activo {
+    fill: rgba(44, 138, 85, 0.8) !important;
+    stroke-width: 2px !important;
 }
 
 /* Manzana B */
-#lotes-web path.manzana-B {
+svg .lote[data-manzana="B"] {
     stroke: #C08A2E !important;
-    stroke-width: 1px !important;
+    stroke-width: 0.8px !important;
 }
 
-#lotes-web path.manzana-B:hover {
-    fill: rgba(177, 138, 53, 0.4) !important;
-    stroke: #b18a35 !important;
+svg .lote[data-manzana="B"]:hover {
+    fill: rgba(192, 138, 46, 0.5) !important;
+    stroke-width: 1.5px !important;
+}
+
+svg .lote[data-manzana="B"].activo {
+    fill: rgba(192, 138, 46, 0.8) !important;
     stroke-width: 2px !important;
-}
-
-#lotes-web path.manzana-B.activo {
-    fill: rgba(177, 138, 53, 0.5) !important;
-    stroke: #b18a35 !important;
-    stroke-width: 3px !important;
 }
 
 /* Manzana C */
-#lotes-web path.manzana-C {
+svg .lote[data-manzana="C"] {
     stroke: #40566F !important;
-    stroke-width: 1px !important;
+    stroke-width: 0.8px !important;
 }
 
-#lotes-web path.manzana-C:hover {
-    fill: rgba(74, 90, 107, 0.4) !important;
-    stroke: #4a5a6b !important;
+svg .lote[data-manzana="C"]:hover {
+    fill: rgba(64, 86, 111, 0.5) !important;
+    stroke-width: 1.5px !important;
+}
+
+svg .lote[data-manzana="C"].activo {
+    fill: rgba(64, 86, 111, 0.8) !important;
     stroke-width: 2px !important;
 }
 
-#lotes-web path.manzana-C.activo {
-    fill: rgba(74, 90, 107, 0.5) !important;
-    stroke: #4a5a6b !important;
-    stroke-width: 3px !important;
-}
-
 /* ========================================
-   ETIQUETAS (NÚMEROS) DENTRO DEL MAPA
+   ESTADOS EN EL MAPA (RESERVADO / VENDIDO)
 ======================================== */
-.etiqueta-lote {
-    fill: #526158;
-    font-family: Arial, sans-serif;
-    font-size: 7px;
-    font-weight: 100;
-    text-anchor: middle;
-    dominant-baseline: central;
-    pointer-events: none;
-    user-select: none;
+svg .lote.lote-reservado {
+    fill: rgba(231, 76, 60, 0.6) !important;
+    /* Rojo reservado más notorio */
+    stroke: #c0392b !important;
+    stroke-width: 1px !important;
+}
+
+svg .lote.lote-vendido {
+    fill: rgba(149, 165, 166, 0.7) !important;
+    /* Gris vendido notorio */
+    stroke: #7f8c8d !important;
+    stroke-width: 1px !important;
+}
+
+svg .lote.lote-reservado:hover,
+svg .lote.lote-vendido:hover {
+    opacity: 0.8;
+}
+
+/* Evitar que pierdan su color rojo/gris cuando seleccionamos una manzana */
+#mapa-container.manzana-A-seleccionada svg .lote.lote-reservado,
+#mapa-container.manzana-B-seleccionada svg .lote.lote-reservado,
+#mapa-container.manzana-C-seleccionada svg .lote.lote-reservado {
+    fill: rgba(231, 76, 60, 0.6) !important;
+}
+
+#mapa-container.manzana-A-seleccionada svg .lote.lote-vendido,
+#mapa-container.manzana-B-seleccionada svg .lote.lote-vendido,
+#mapa-container.manzana-C-seleccionada svg .lote.lote-vendido {
+    fill: rgba(149, 165, 166, 0.7) !important;
 }
 
 /* ========================================
-   COLUMNA DERECHA (TARJETA + BOTÓN EXTERNO)
+   RESALTAR MANZANA SELECCIONADA
+======================================== */
+/* Cuando se selecciona A */
+#mapa-container.manzana-A-seleccionada svg .lote[data-manzana="A"]:not(.lote-reservado):not(.lote-vendido) {
+    fill: rgba(44, 138, 85, 0.35) !important;
+    stroke-width: 1.5px !important;
+}
+
+#mapa-container.manzana-A-seleccionada svg .lote[data-manzana="B"],
+#mapa-container.manzana-A-seleccionada svg .lote[data-manzana="C"] {
+    opacity: 0.25;
+}
+
+/* Cuando se selecciona B */
+#mapa-container.manzana-B-seleccionada svg .lote[data-manzana="B"]:not(.lote-reservado):not(.lote-vendido) {
+    fill: rgba(192, 138, 46, 0.35) !important;
+    stroke-width: 1.5px !important;
+}
+
+#mapa-container.manzana-B-seleccionada svg .lote[data-manzana="A"],
+#mapa-container.manzana-B-seleccionada svg .lote[data-manzana="C"] {
+    opacity: 0.25;
+}
+
+/* Cuando se selecciona C */
+#mapa-container.manzana-C-seleccionada svg .lote[data-manzana="C"]:not(.lote-reservado):not(.lote-vendido) {
+    fill: rgba(64, 86, 111, 0.35) !important;
+    stroke-width: 1.5px !important;
+}
+
+#mapa-container.manzana-C-seleccionada svg .lote[data-manzana="A"],
+#mapa-container.manzana-C-seleccionada svg .lote[data-manzana="B"] {
+    opacity: 0.25;
+}
+
+/* ========================================
+   ESTADOS EN EL MAPA (RESERVADO / VENDIDO)
+======================================== */
+svg .lote.lote-reservado {
+    fill: rgba(231, 76, 60, 0.5) !important;
+    /* Rojo reservado */
+    stroke: #c0392b !important;
+    stroke-width: 1px !important;
+}
+
+svg .lote.lote-vendido {
+    fill: rgba(149, 165, 166, 0.6) !important;
+    /* Gris vendido */
+    stroke: #7f8c8d !important;
+    stroke-width: 1px !important;
+}
+
+svg .lote.lote-reservado:hover,
+svg .lote.lote-vendido:hover {
+    opacity: 0.8;
+}
+
+/* Evitar que pierdan el color rojo/gris cuando seleccionamos una manzana entera */
+#mapa-container.manzana-A-seleccionada svg .lote.lote-reservado,
+#mapa-container.manzana-B-seleccionada svg .lote.lote-reservado,
+#mapa-container.manzana-C-seleccionada svg .lote.lote-reservado {
+    fill: rgba(231, 76, 60, 0.6) !important;
+}
+
+#mapa-container.manzana-A-seleccionada svg .lote.lote-vendido,
+#mapa-container.manzana-B-seleccionada svg .lote.lote-vendido,
+#mapa-container.manzana-C-seleccionada svg .lote.lote-vendido {
+    fill: rgba(127, 140, 141, 0.6) !important;
+}
+
+/* ========================================
+   RESALTAR MANZANA SELECCIONADA
+======================================== */
+/* Cuando se selecciona A */
+#mapa-container.manzana-A-seleccionada svg .lote[data-manzana="A"] {
+    fill: rgba(44, 138, 85, 0.15) !important;
+    stroke-width: 1.5px !important;
+}
+
+#mapa-container.manzana-A-seleccionada svg .lote[data-manzana="B"],
+#mapa-container.manzana-A-seleccionada svg .lote[data-manzana="C"] {
+    opacity: 0.4;
+}
+
+/* Cuando se selecciona B */
+#mapa-container.manzana-B-seleccionada svg .lote[data-manzana="B"] {
+    fill: rgba(192, 138, 46, 0.15) !important;
+    stroke-width: 1.5px !important;
+}
+
+#mapa-container.manzana-B-seleccionada svg .lote[data-manzana="A"],
+#mapa-container.manzana-B-seleccionada svg .lote[data-manzana="C"] {
+    opacity: 0.4;
+}
+
+/* Cuando se selecciona C */
+#mapa-container.manzana-C-seleccionada svg .lote[data-manzana="C"] {
+    fill: rgba(64, 86, 111, 0.15) !important;
+    stroke-width: 1.5px !important;
+}
+
+#mapa-container.manzana-C-seleccionada svg .lote[data-manzana="A"],
+#mapa-container.manzana-C-seleccionada svg .lote[data-manzana="B"] {
+    opacity: 0.4;
+}
+
+
+/* ========================================
+   COLUMNA DERECHA (TARJETA)
 ======================================== */
 .columna-derecha-lotes {
     display: flex;
@@ -302,6 +417,9 @@
     padding-right: 20px;
 }
 
+/* ========================================
+   ESTADOS DE LOS LOTES (NUEVO "VENDIDO")
+======================================== */
 .estado-etiqueta {
     display: inline-block;
     padding: 6px 14px;
@@ -321,6 +439,12 @@
     color: #e74c3c;
 }
 
+.estado-etiqueta.vendido {
+    background: #e0e4e2;
+    color: #526158;
+    text-decoration: line-through;
+}
+
 .info-lote p {
     color: #526158;
     font-size: 14px;
@@ -337,7 +461,6 @@
     color: #1f3026;
 }
 
-/* Diseño de medidas con línea punteada */
 .medidas {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -452,7 +575,6 @@ button {
 ======================================== */
 body.modo-fullscreen {
     overflow: hidden;
-    /* Evita hacer scroll en la página */
     background: #f8f6ef;
 }
 
@@ -495,7 +617,6 @@ body.modo-fullscreen .section-container {
 
 body.modo-fullscreen .lotes-explorador {
     display: block;
-    /* Quitamos la grilla */
     height: 100vh;
 }
 
@@ -517,13 +638,9 @@ body.modo-fullscreen .topbar-fullscreen {
     left: 0;
     width: 100%;
     padding: 15px 30px;
-
-    /* FONDO VERDE OSCURO */
     background: #1f3026;
-
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     z-index: 100;
-    /* Encima del mapa */
 }
 
 .topbar-izq {
@@ -535,16 +652,13 @@ body.modo-fullscreen .topbar-fullscreen {
 .topbar-izq img {
     width: 120px;
     filter: brightness(0) invert(1);
-    /* Truco: Vuelve el logo blanco automáticamente para que se vea en el fondo verde */
 }
 
 .topbar-izq span {
     font-size: 16px;
     font-weight: 600;
     color: #c69b3b;
-    /* Dorado */
     border-left: 2px solid rgba(255, 255, 255, 0.2);
-    /* Línea más suave */
     padding-left: 20px;
 }
 
@@ -554,9 +668,7 @@ body.modo-fullscreen .topbar-fullscreen {
     gap: 8px;
     background: transparent;
     border: 1px solid rgba(255, 255, 255, 0.5);
-    /* Borde blanquito */
     color: #ffffff;
-    /* Letras blancas */
     padding: 10px 20px;
     border-radius: 30px;
     font-weight: 600;
@@ -603,26 +715,22 @@ body.modo-fullscreen .minimapa-flotante {
 }
 
 /* --------------------------------------
-   NUEVO: FONDO OSCURO DEL MODAL
+   FONDO OSCURO DEL MODAL
 -------------------------------------- */
 .overlay-modal {
     display: none;
-    /* Oculto por defecto */
     position: fixed;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     background: rgba(15, 25, 18, 0.7);
-    /* Verde muy oscuro y transparente */
     backdrop-filter: blur(3px);
-    /* Desenfoca el mapa del fondo (Toque premium) */
     z-index: 999;
-    /* Por debajo de la tarjeta blanca */
 }
 
 /* --------------------------------------
-   TARJETA FLOTANTE (MODAL POPUP) CORREGIDA
+   TARJETA FLOTANTE (MODAL POPUP)
 -------------------------------------- */
 body.modo-fullscreen .info-lote {
     display: none;
@@ -631,39 +739,16 @@ body.modo-fullscreen .info-lote {
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1000;
-    /* Siempre por encima de todo */
-
     width: 90%;
     max-width: 400px;
     background: #ffffff !important;
-    /* Forzamos a que sea BLANCA siempre */
     border: none;
     box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
 }
 
-/* Clases para mostrar el modal y el fondo */
 body.modo-fullscreen .info-lote.mostrar-modal,
 body.modo-fullscreen .overlay-modal.mostrar-modal {
     display: block;
-}
-
-/* Botón cerrar "X" corregido para que se vea bien */
-.cerrar-lote {
-    position: absolute;
-    right: 20px;
-    top: 15px;
-    background: none;
-    border: none;
-    font-size: 32px;
-    /* Más grande */
-    color: #1f3026;
-    /* Color oscuro */
-    cursor: pointer;
-    z-index: 10;
-}
-
-.cerrar-lote:hover {
-    color: #c69b3b;
 }
 
 /* ========================================
@@ -701,7 +786,7 @@ body.modo-fullscreen .minimapa-flotante img {
 }
 
 /* ========================================
-   RESPONSIVE MÓVIL (MENOS CARGADO)
+   RESPONSIVE MÓVIL Y MEDIA QUERIES
 ======================================== */
 @media (max-width: 768px) {
     .lotes {
@@ -719,12 +804,6 @@ body.modo-fullscreen .minimapa-flotante img {
         margin-bottom: 12px;
     }
 
-    .plano-general-imagen img {
-        width: 100%;
-        height: auto;
-    }
-
-    /* Mapa más compacto para que no sature la vista */
     .mapa-viewport {
         height: 310px;
         border-radius: 16px;
@@ -737,7 +816,6 @@ body.modo-fullscreen .minimapa-flotante img {
         font-size: 12px;
     }
 
-    /* Botón flotante para desplegar el mini mapa en móvil */
     body.modo-fullscreen .minimapa-wrapper {
         top: 70px;
         right: 15px;
@@ -757,7 +835,6 @@ body.modo-fullscreen .minimapa-flotante img {
         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
     }
 
-    /* El contenido del minimapa empieza colapsado en celular */
     body.modo-fullscreen .minimapa-flotante {
         display: none;
         position: absolute;
@@ -777,7 +854,6 @@ body.modo-fullscreen .minimapa-flotante img {
 
     .topbar-izq span {
         display: none;
-        /* Simplificamos texto en móvil */
     }
 
     .topbar-izq img {
@@ -789,7 +865,6 @@ body.modo-fullscreen .minimapa-flotante img {
         font-size: 13px;
     }
 
-    /* MODAL DE INFORMACIÓN DEL LOTE EN MÓVIL: TIPO BOTTOM SHEET */
     .info-lote {
         position: fixed;
         bottom: -100%;
@@ -817,122 +892,68 @@ body.modo-fullscreen .minimapa-flotante img {
         width: 100%;
         max-width: 100%;
     }
+
+    .selector-manzanas {
+        gap: 8px;
+        margin: 20px 0 25px;
+    }
+
+    .manzana-btn {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
+
+    .lotes-explorador .mapa-viewport {
+        display: none;
+    }
+
+    .lotes-explorador.manzana-seleccionada .plano-general-lotes {
+        display: none;
+    }
+
+    .lotes-explorador.manzana-seleccionada .mapa-viewport {
+        display: block;
+    }
+
+    .btn-volver-plano {
+        display: none !important;
+    }
+
+    .btn-volver-plano.visible {
+        display: inline-flex !important;
+    }
+
+    .btn-mapa-completo {
+        display: none !important;
+    }
 }
 
 /* ========================================
    SELECTOR DE MANZANAS
 ======================================== */
-
 .selector-manzanas {
     display: flex;
     gap: 12px;
     margin: 25px 0 30px;
 }
 
-/* ========================================
-   RESALTAR MANZANA SELECCIONADA
-======================================== */
-
-/* Cuando se selecciona A */
-#mapa-container.manzana-A-seleccionada #lotes-web path.manzana-A {
-    fill: rgba(44, 138, 85, 0.18) !important;
-    stroke: #2C8A55 !important;
-    stroke-width: 2px !important;
-}
-
-#mapa-container.manzana-A-seleccionada #lotes-web path.manzana-B,
-#mapa-container.manzana-A-seleccionada #lotes-web path.manzana-C {
-    opacity: 0.45;
-}
-
-
-/* Cuando se selecciona B */
-#mapa-container.manzana-B-seleccionada #lotes-web path.manzana-B {
-    fill: rgba(192, 138, 46, 0.18) !important;
-    stroke: #C08A2E !important;
-    stroke-width: 2px !important;
-}
-
-#mapa-container.manzana-B-seleccionada #lotes-web path.manzana-A,
-#mapa-container.manzana-B-seleccionada #lotes-web path.manzana-C {
-    opacity: 0.45;
-}
-
-
-/* Cuando se selecciona C */
-#mapa-container.manzana-C-seleccionada #lotes-web path.manzana-C {
-    fill: rgba(64, 86, 111, 0.18) !important;
-    stroke: #40566F !important;
-    stroke-width: 2px !important;
-}
-
-#mapa-container.manzana-C-seleccionada #lotes-web path.manzana-A,
-#mapa-container.manzana-C-seleccionada #lotes-web path.manzana-B {
-    opacity: 0.45;
-}
-
-/* ========================================
-   LOTE SELECCIONADO
-======================================== */
-
-#lotes-web path.activo {
-    opacity: 1 !important;
-    stroke-width: 4px !important;
-}
-
-/* ========================================
-   LOTE SELECCIONADO - PRIORIDAD FINAL
-======================================== */
-
-#mapa-container.manzana-A-seleccionada #lotes-web path.manzana-A.activo {
-    fill: rgba(44, 138, 85, 0.65) !important;
-    stroke: #1f3026 !important;
-    stroke-width: 4px !important;
-    opacity: 1 !important;
-}
-
-#mapa-container.manzana-B-seleccionada #lotes-web path.manzana-B.activo {
-    fill: rgba(192, 138, 46, 0.65) !important;
-    stroke: #7a5715 !important;
-    stroke-width: 4px !important;
-    opacity: 1 !important;
-}
-
-#mapa-container.manzana-C-seleccionada #lotes-web path.manzana-C.activo {
-    fill: rgba(64, 86, 111, 0.65) !important;
-    stroke: #263746 !important;
-    stroke-width: 4px !important;
-    opacity: 1 !important;
-}
-
 .manzana-btn {
     flex: 1;
     padding: 14px 20px;
-
     border: 1px solid #e5e0d5;
     border-radius: 12px;
-
     background: #ffffff;
     color: #526158;
-
     font-size: 15px;
     font-weight: 600;
-
     cursor: pointer;
-
-    transition:
-        background-color 0.3s ease,
-        color 0.3s ease,
-        border-color 0.3s ease,
-        transform 0.25s ease;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, transform 0.25s ease;
 }
 
 .manzana-btn:hover {
     transform: translateY(-2px);
     border-color: #2c8a55;
 }
-
-/* Color del botón según la manzana */
 
 .manzana-btn[data-manzana="A"].activo {
     background: #2C8A55;
@@ -953,49 +974,31 @@ body.modo-fullscreen .minimapa-flotante img {
 }
 
 /* ========================================
-   SELECTOR DE MANZANAS - CELULAR
+   BOTÓN VOLVER AL PLANO GENERAL
 ======================================== */
+.btn-volver-plano {
+    display: none;
+    align-items: center;
+    gap: 8px;
+    width: fit-content;
+    margin: 0 0 16px;
+    padding: 10px 18px;
+    border: 1px solid #d8d2c5;
+    border-radius: 12px;
+    background: #ffffff;
+    color: #1f3026;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
 
-@media (max-width: 768px) {
+.btn-volver-plano:hover {
+    border-color: #2c8a55;
+    color: #2c8a55;
+    transform: translateX(-2px);
+}
 
-    .selector-manzanas {
-        gap: 8px;
-        margin: 20px 0 25px;
-    }
-
-    .manzana-btn {
-        padding: 12px 8px;
-        font-size: 14px;
-    }
-
-    /* ========================================
-   VOLVER AL PLANO GENERAL - CELULAR
-======================================== */
-
-    .btn-volver-plano {
-        display: none;
-    }
-
-    @media (max-width: 768px) {
-
-        .btn-volver-plano {
-            display: none;
-            width: 100%;
-            margin: 0 0 15px;
-            padding: 12px 16px;
-            border: 1px solid #e5e0d5;
-            border-radius: 12px;
-            background: #ffffff;
-            color: #1f3026;
-            font-size: 14px;
-            font-weight: 600;
-            cursor: pointer;
-        }
-
-        .btn-volver-plano.visible {
-            display: block;
-        }
-
-    }
-
+.btn-volver-plano.visible {
+    display: inline-flex;
 }
