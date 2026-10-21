@@ -186,7 +186,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-10": {
@@ -207,7 +207,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-11": {
@@ -228,7 +228,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-12": {
@@ -354,7 +354,7 @@ const lotes = {
     precioM2Final: 484.23,
     precioCaja: 49528.6,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-18": {
@@ -375,7 +375,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-19": {
@@ -396,7 +396,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-20": {
@@ -459,7 +459,7 @@ const lotes = {
     precioM2Final: 485.5,
     precioCaja: 45477.2,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-23": {
@@ -480,7 +480,7 @@ const lotes = {
     precioM2Final: 492.95,
     precioCaja: 55603.2,
     precioM2Caja: 480,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-24": {
@@ -501,7 +501,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-25": {
@@ -522,7 +522,7 @@ const lotes = {
     precioM2Final: 485.11,
     precioCaja: 46652.2,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-26": {
@@ -543,7 +543,7 @@ const lotes = {
     precioM2Final: 484.2,
     precioCaja: 49650.8,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-27": {
@@ -564,7 +564,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-28": {
@@ -585,7 +585,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-29": {
@@ -606,7 +606,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-30": {
@@ -627,7 +627,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-31": {
@@ -648,7 +648,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-32": {
@@ -669,7 +669,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-33": {
@@ -690,7 +690,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-34": {
@@ -711,7 +711,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-35": {
@@ -732,7 +732,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-36": {
@@ -753,7 +753,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "A-37": {
@@ -774,7 +774,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
   "B-01": {
     numero: "01",
@@ -836,7 +836,7 @@ const lotes = {
     precioM2Final: 476.08,
     precioCaja: 42913.4,
     precioM2Caja: 460,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "B-04": {
@@ -920,7 +920,7 @@ const lotes = {
     precioM2Final: 476.67,
     precioCaja: 41400,
     precioM2Caja: 460,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "B-08": {
@@ -1381,7 +1381,7 @@ const lotes = {
     precioM2Final: 486.66,
     precioCaja: 42304.7,
     precioM2Caja: 470,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "C-04": {
@@ -1465,7 +1465,7 @@ const lotes = {
     precioM2Final: 476.31,
     precioCaja: 42292.4,
     precioM2Caja: 460,
-    estado: "Reservado"
+    estado: "Disponible"
   },
 
   "C-08": {
