@@ -1,0 +1,356 @@
+/* =========================
+   AVANCES DE OBRA - GENERAL
+========================= */
+.avances {
+    padding: 50px 0 70px;
+    background: #f8f6ef;
+    overflow: hidden;
+}
+
+.avances h2 {
+    margin: 0 0 12px;
+    color: #1f3026;
+}
+
+.avances .section-description {
+    max-width: 620px;
+    margin: 0 0 35px;
+    font-size: 17px;
+    line-height: 1.6;
+    color: #526158;
+}
+
+/* =========================
+   PESTAÑAS (AGUA, DESAGÜE, ...)
+========================= */
+.avances-tabs {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 28px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+    scrollbar-width: none;
+}
+
+.avances-tabs::-webkit-scrollbar {
+    display: none;
+}
+
+.avance-tab {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 22px;
+    border: 1.5px solid rgba(198, 155, 59, 0.45);
+    border-radius: 999px;
+    background: #ffffff;
+    color: #1f3026;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: inherit;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+
+.avance-tab svg {
+    stroke: #c69b3b;
+    transition: stroke 0.3s ease;
+}
+
+.avance-tab:hover {
+    border-color: #c69b3b;
+}
+
+.avance-tab.activo {
+    background: #1f3026;
+    border-color: #1f3026;
+    color: #ffffff;
+}
+
+.avance-tab.activo svg {
+    stroke: #c69b3b;
+}
+
+.avance-tab:focus-visible,
+.avance-flecha:focus-visible,
+.avance-dot:focus-visible {
+    outline: 3px solid #c69b3b;
+    outline-offset: 3px;
+}
+
+/* =========================
+   PANEL + TEXTO
+========================= */
+.avance-panel {
+    display: none;
+}
+
+.avance-panel.activo {
+    display: block;
+    animation: avanceFade 0.5s ease;
+}
+
+@keyframes avanceFade {
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.avance-resumen {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.avance-resumen h3 {
+    margin: 0;
+    font-size: 22px;
+    color: #1f3026;
+}
+
+.avance-resumen p {
+    margin: 4px 0 0;
+    font-size: 15px;
+    color: #526158;
+}
+
+.avance-estado {
+    padding: 8px 16px;
+    border-radius: 999px;
+    background: rgba(198, 155, 59, 0.14);
+    color: #8a6a1f;
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* =========================
+   CARRUSEL
+========================= */
+.avance-carousel {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    background: #ffffff;
+    border: 4px solid #ffffff;
+    box-shadow: 0 10px 30px rgba(30, 55, 40, 0.08);
+}
+
+.avance-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+}
+
+.avance-track::-webkit-scrollbar {
+    display: none;
+}
+
+.avance-slide {
+    position: relative;
+    flex: 0 0 100%;
+    margin: 0;
+    scroll-snap-align: center;
+    aspect-ratio: 16 / 9;
+    background: #1f3026;
+}
+
+.avance-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: zoom-in;
+}
+
+.avance-slide figcaption {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 40px 24px 20px;
+    background: linear-gradient(to top, rgba(20, 32, 25, 0.85), transparent);
+    color: #ffffff;
+    font-size: 15px;
+    line-height: 1.4;
+    pointer-events: none;
+}
+
+.avance-slide figcaption small {
+    display: block;
+    margin-top: 2px;
+    color: #e3c47a;
+    font-size: 13px;
+}
+
+/* Flechas */
+.avance-flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.92);
+    color: #1f3026;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    z-index: 2;
+}
+
+.avance-flecha:hover {
+    background: #c69b3b;
+    color: #ffffff;
+}
+
+.avance-flecha.prev {
+    left: 16px;
+}
+
+.avance-flecha.next {
+    right: 16px;
+}
+
+/* Contador y puntos */
+.avance-contador {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    background: rgba(31, 48, 38, 0.75);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.avance-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 18px;
+}
+
+.avance-dot {
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border: none;
+    border-radius: 999px;
+    background: rgba(31, 48, 38, 0.2);
+    cursor: pointer;
+    transition: width 0.3s ease, background 0.3s ease;
+}
+
+.avance-dot.activo {
+    width: 28px;
+    background: #c69b3b;
+}
+
+/* =========================
+   LIGHTBOX (VER EN GRANDE)
+========================= */
+.avance-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgba(12, 20, 15, 0.92);
+}
+
+.avance-lightbox.abierto {
+    display: flex;
+}
+
+.avance-lightbox img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.avance-lightbox-cerrar {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    width: 44px;
+    height: 44px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    color: #ffffff;
+    font-size: 28px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+/* =========================
+   RESPONSIVE (CELULARES)
+========================= */
+@media (max-width: 768px) {
+    .avances {
+        padding: 50px 0 60px;
+    }
+
+    .avance-tab {
+        padding: 10px 18px;
+        font-size: 14px;
+    }
+
+    .avance-slide {
+        aspect-ratio: 4 / 3;
+    }
+
+    .avance-slide figcaption {
+        padding: 30px 16px 14px;
+        font-size: 14px;
+    }
+
+    .avance-flecha {
+        width: 38px;
+        height: 38px;
+    }
+
+    .avance-flecha.prev {
+        left: 8px;
+    }
+
+    .avance-flecha.next {
+        right: 8px;
+    }
+
+    .avance-resumen h3 {
+        font-size: 19px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .avance-track {
+        scroll-behavior: auto;
+    }
+
+    .avance-panel.activo {
+        animation: none;
+    }
+}

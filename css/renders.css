@@ -1,0 +1,69 @@
+/* ========================================
+   06. RENDERS
+======================================== */
+.renders {
+    padding: 80px 0;
+    background-color: #ffffff;
+    /* Fondo blanco */
+    text-align: center;
+}
+
+.renders h2 {
+    color: #1f3026;
+    margin-bottom: 15px;
+}
+
+/* Grilla para los 3 videos */
+.renders-grid {
+    display: grid;
+    /* Esto hace que en PC se vean 3 columnas, y en móvil se apilen en 1 */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Caja de cada video */
+.render-video {
+    background: #000;
+    /* Fondo negro por si el video tiene bordes distintos */
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(31, 48, 38, 0.1);
+    /* Sombra elegante */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    /* Mantiene una proporción estándar 16:9 de video */
+    aspect-ratio: 16 / 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.render-video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(31, 48, 38, 0.2);
+}
+
+/* El video en sí */
+.render-video video {
+    width: 100%;
+    height: 100%;
+
+    /* LA MAGIA: 'contain' fuerza a que todo el video se vea sin recortes */
+    object-fit: contain;
+    display: block;
+    border-radius: 16px;
+}
+
+/* Ajustes Responsive (Móvil) */
+@media (max-width: 768px) {
+    .renders {
+        padding: 50px 0;
+    }
+
+    .renders-grid {
+        gap: 20px;
+    }
+}

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="css/lotes.css">
     <link rel="stylesheet" href="css/servicios.css">
     <link rel="stylesheet" href="css/diferencias.css">
+    <link rel="stylesheet" href="css/renders.css">
+    <link rel="stylesheet" href="css/avances.css">
     <link rel="stylesheet" href="css/galeria.css">
     <link rel="stylesheet" href="css/contacto.css">
     <link rel="stylesheet" href="css/footer.css">
@@ -39,6 +41,8 @@
                 <a href="#lotes">Lotes</a>
                 <a href="#servicios">Servicios</a>
                 <a href="#diferencias">Nosotros</a>
+                <a href="#renders"> Renders </a>
+                <a href="#avances">Avances Obra</a>
 
                 <!-- Botón visible solo dentro del menú desplegable móvil -->
                 <a href="https://wa.me/51954742266?text=Hola%2C%20quiero%20informaci%C3%B3n%20sobre%20Alameda%20de%20Yanamarca"
@@ -409,7 +413,7 @@
                             <img src="assets/img/DESAGUE.png" alt="Sistema de Desagüe">
                             <div class="tab-info">
                                 <h3>Sistema de desagüe</h3>
-                                <p>Contamos con un sistema de desagüe proyectado para la zona, cumpliendo con los
+                                <p>Contamos con un sistema de desagüe para la zona, cumpliendo con los
                                     estándares de sanidad y cuidado ambiental.</p>
                             </div>
                         </div>
@@ -537,8 +541,254 @@
     </section>
 
     <!-- =========================
-         06. GALERÍA
+         06. RENDERS
     ========================== -->
+    <section id="renders" class="renders">
+        <div class="section-container">
+            <span class="section-label-grande fade-in">PROYECTO EN 3D</span>
+            <h2 class="fade-in">Renders y recorridos virtuales</h2>
+            <p class="section-description fade-in" style="margin: 0 auto 40px auto; text-align: center;">
+                Descubre cómo se verá tu futuro hogar. Explora nuestros recorridos y visualiza cada espacio.
+            </p>
+
+            <div class="renders-grid">
+                <!-- Video 1 -->
+                <div class="render-video fade-in">
+                    <video controls playsinline preload="metadata">
+                        <source src="assets/videos/F1.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+
+                <!-- Video 2 -->
+                <div class="render-video fade-in" style="animation-delay: 0.2s;">
+                    <video controls playsinline preload="metadata">
+                        <source src="assets/videos/F2.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+
+                <!-- Video 3 -->
+                <div class="render-video fade-in" style="animation-delay: 0.4s;">
+                    <video controls playsinline preload="metadata">
+                        <source src="assets/videos/F3.mp4" type="video/mp4">
+                        Tu navegador no soporta la etiqueta de video.
+                    </video>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================
+         AVANCES DE OBRA
+    ========================== -->
+    <section id="avances" class="avances">
+        <div class="section-container">
+            <span class="section-label-grande fade-in">AVANCES DE OBRA</span>
+            <h2 class="fade-in">Mira cómo avanza el proyecto</h2>
+            <p class="section-description fade-in">
+                Fotos reales de la obra, actualizadas por etapa. Elige una y recorre el avance.
+            </p>
+
+            <!-- PESTAÑAS -->
+            <div class="avances-tabs" role="tablist">
+                <button class="avance-tab activo" data-target="avance-agua" role="tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+                    </svg>
+                    Agua
+                </button>
+                <button class="avance-tab" data-target="avance-desague" role="tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 22V12h6v10"></path>
+                        <path d="M2 10.6L12 2l10 8.6"></path>
+                    </svg>
+                    Desagüe
+                </button>
+                <button class="avance-tab" data-target="avance-veredas" role="tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M3 21 8 3h8l5 18"></path>
+                        <path d="M12 6v2M12 11v2M12 16v2"></path>
+                    </svg>
+                    Veredas
+                </button>
+                <button class="avance-tab" data-target="avance-alameda" role="tab">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z">
+                        </path>
+                        <path d="M2 22l10-10"></path>
+                    </svg>
+                    Alameda
+                </button>
+            </div>
+
+            <!-- ===== AGUA ===== -->
+            <div id="avance-agua" class="avance-panel activo">
+                <div class="avance-resumen">
+                    <div>
+                        <h3>Red de agua potable</h3>
+                        <p>Instalación de tuberías y conexiones para todos los lotes.</p>
+                    </div>
+                    <span class="avance-estado">Avance: 100%</span>
+                </div>
+                <div class="avance-carousel">
+                    <span class="avance-contador"></span>
+                    <button type="button" class="avance-flecha prev" aria-label="Foto anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button type="button" class="avance-flecha next" aria-label="Foto siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="avance-track">
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/ag1.png" alt="Avance de obra: agua" loading="lazy">
+                            <figcaption>Excavación e instalación de tubería<small>Mes 2026</small></figcaption>
+                        </figure>
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/ag2.png" alt="Avance de obra: agua" loading="lazy">
+                            <figcaption>Conexiones por lote<small>Mes 2026</small></figcaption>
+                        </figure>
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/ag3.png" alt="Avance de obra: agua" loading="lazy">
+                            <figcaption>Red terminada<small>Mes 2026</small></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="avance-dots"></div>
+            </div>
+
+            <!-- ===== DESAGÜE ===== -->
+            <div id="avance-desague" class="avance-panel">
+                <div class="avance-resumen">
+                    <div>
+                        <h3>Sistema de desagüe</h3>
+                        <p>Colectores y buzones instalados según norma sanitaria.</p>
+                    </div>
+                    <span class="avance-estado">Avance: 100%</span>
+                </div>
+                <div class="avance-carousel">
+                    <span class="avance-contador"></span>
+                    <button type="button" class="avance-flecha prev" aria-label="Foto anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button type="button" class="avance-flecha next" aria-label="Foto siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="avance-track">
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/des1.png" alt="Avance de obra: desagüe" loading="lazy">
+                            <figcaption>Instalación de colectores<small>Mes 2026</small></figcaption>
+                        </figure>
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/des2.png" alt="Avance de obra: desagüe" loading="lazy">
+                            <figcaption>Construcción de buzones<small>Mes 2026</small></figcaption>
+                        </figure>
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/des3.png" alt="Avance de obra: desagüe" loading="lazy">
+                            <figcaption>Red terminada<small>Mes 2026</small></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="avance-dots"></div>
+            </div>
+
+            <!-- ===== VEREDAS ===== -->
+            <div id="avance-veredas" class="avance-panel">
+                <div class="avance-resumen">
+                    <div>
+                        <h3>Veredas construidas</h3>
+                        <p>Veredas de concreto para caminar con comodidad y seguridad.</p>
+                    </div>
+                    <span class="avance-estado">Avance: 100%</span>
+                </div>
+                <div class="avance-carousel">
+                    <span class="avance-contador"></span>
+                    <button type="button" class="avance-flecha prev" aria-label="Foto anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button type="button" class="avance-flecha next" aria-label="Foto siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="avance-track">
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/vereda1.png" alt="Avance de obra: veredas" loading="lazy">
+                            <figcaption>Encofrado y vaciado<small>Mes 2026</small></figcaption>
+                        </figure>
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/vereda2.png" alt="Avance de obra: veredas" loading="lazy">
+                            <figcaption>Veredas en construcción<small>Mes 2026</small></figcaption>
+                        </figure>
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/vereda3.png" alt="Avance de obra: veredas" loading="lazy">
+                            <figcaption>Veredas terminadas<small>Mes 2026</small></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="avance-dots"></div>
+            </div>
+
+            <!-- ===== ALAMEDA ===== -->
+            <div id="avance-alameda" class="avance-panel">
+                <div class="avance-resumen">
+                    <div>
+                        <h3>La alameda</h3>
+                        <p>Áreas verdes y arborización que dan identidad al proyecto.</p>
+                    </div>
+                    <span class="avance-estado">Avance: 100%</span>
+                </div>
+                <div class="avance-carousel">
+                    <span class="avance-contador"></span>
+                    <button type="button" class="avance-flecha prev" aria-label="Foto anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <button type="button" class="avance-flecha next" aria-label="Foto siguiente">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="avance-track">
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/al1.png" alt="Avance de obra: alameda" loading="lazy">
+                            <figcaption>Semillas de árboles<small>2026</small></figcaption>
+                        </figure>
+                        <figure class="avance-slide">
+                            <img src="assets/img/avances/al2.png" alt="Avance de obra: alameda" loading="lazy">
+                            <figcaption>Siembra de árboles<small>2026</small></figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="avance-dots"></div>
+            </div>
+
+        </div>
+    </section>
+
 
 
     <!-- =========================
@@ -639,11 +889,17 @@
 
     </div>
 
+    <!-- VISOR DE FOTOS AVANCES -->
+    <div id="avance-lightbox" class="avance-lightbox" role="dialog" aria-label="Foto ampliada">
+        <button type="button" class="avance-lightbox-cerrar" aria-label="Cerrar">&times;</button>
+        <img src="" alt="">
+    </div>
 
 
     <!-- JAVASCRIPT -->
     <script src="js/lotes.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/avances.js"></script>
 
     <!-- WHATSAPP FLOTANTE -->
     <a href="https://wa.me/51954742266?text=Hola%2C%20quisiera%20recibir%20informaci%C3%B3n%20sobre%20el%20proyecto%20Alameda%20de%20Yanamarca."
