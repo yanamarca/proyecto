@@ -459,7 +459,7 @@ const lotes = {
     precioM2Final: 485.5,
     precioCaja: 45477.2,
     precioM2Caja: 470,
-    estado: "Disponible"
+    estado: "Vendido"
   },
 
   "A-23": {
@@ -480,7 +480,7 @@ const lotes = {
     precioM2Final: 492.95,
     precioCaja: 55603.2,
     precioM2Caja: 480,
-    estado: "Disponible"
+    estado: "Vendido"
   },
 
   "A-24": {
@@ -669,7 +669,7 @@ const lotes = {
     precioM2Final: 486.67,
     precioCaja: 42300,
     precioM2Caja: 470,
-    estado: "Disponible"
+    estado: "Vendido"
   },
 
   "A-33": {
@@ -1214,7 +1214,7 @@ const lotes = {
     precioM2Final: 476.67,
     precioCaja: 41400,
     precioM2Caja: 460,
-    estado: "Disponible"
+    estado: "Vendido"
   },
 
   "B-22": {
@@ -1759,7 +1759,7 @@ const lotes = {
     precioM2Final: 476.67,
     precioCaja: 41400,
     precioM2Caja: 460,
-    estado: "Disponible"
+    estado: "Vendido"
   },
 
   "C-22": {
@@ -1780,7 +1780,7 @@ const lotes = {
     precioM2Final: 476.67,
     precioCaja: 41400,
     precioM2Caja: 460,
-    estado: "Disponible"
+    estado: "Vendido"
   },
 
   "C-23": {
